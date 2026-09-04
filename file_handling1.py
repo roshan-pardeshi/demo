@@ -63,20 +63,21 @@
 ##
 ##
 
-def read_student(n):
+##def read_student(i):
 
-    file = open("python1.txt","r")
+##    file = open("python1.txt","r")
+####    print(n)
+##
+##    data = file.readlines()
+##    for i in range(0,len(data),1):
+##        print(data[i])
+##       
+##    file.close()
+##
+##i = int(input("enter"))
+##read_student(i)
 
-   data = file.readlines()
 
-
-   for i in data:
-       print(i)
-
-       
-    file.close()
-
-read_student(n)
 def add_student(n):
     file = open("python1.txt","a")
 
@@ -113,6 +114,7 @@ def modify_student_record(rename_student_name,roll_number,rename_name):
         for j in range(0,len(data1),1):
             if data1[j]==rename_student_name and data1[j-1]==roll_number:
                 temp.append(rename_name)
+                              
             else:
                 temp.append(data1[j])
 
@@ -130,10 +132,10 @@ def modify_student_record(rename_student_name,roll_number,rename_name):
     file3.close()
 
 
-##modify_student_record(input("enter the name of student to you remove from your record:--"),input("enter the rollnumber:--"),rename_name = input("enter the rename name Here:--"))
+##modify_student_record(input("enter the name of student to you remove from your record:--"),input("enter the rollnumber:--"),input("enter the rename name Here:--"))
 
 
-def remove_student():
+def remove_student(name_of_student,rollno,marks_of_student):
     file = open("python1.txt","r+")
 
     data = file.readlines()
@@ -147,7 +149,7 @@ def remove_student():
 
         temp=[]
         for j in range(0,len(data1),1):
-            if data1[j]=="krishna" and data1[j-1]=="106" and data1[j+1]=='78':
+            if data1[j]==name_of_student and data1[j-1]==rollno and data1[j+1]==marks_of_student:
                 temp.pop()
             else:
                 temp.append(data1[j])
@@ -164,21 +166,64 @@ def remove_student():
     file.close()
 
 
+##remove_studnet(input("enter the remove student_name"),input("enter the rollno of student"),input("enter the student_marks"))
 
 
-##read_student()
-
-
-
-
+#
 
 
 
+##print("1.Add Student in file\n2.Rename Student\n3.remove Student from record\n4.Read All Student Record\n5.Exit From System")
+
+def system():
+    while True:
+        print("1.*Add Student in file*\n2.*Rename (Modify) Student Name Only*\n3.*Remove Student from record*\n4.*Read All Student Record*\n5.*Exit From System*")
 
 
+        choice = int(input("Enter Your Choice"))
+
+        match(choice):
+            case 1:
+                n = int(input("Enter How Many Student You Add:-"))
+                add_student(n)
+
+            case 2:
+                modify_student_record(input("enter the name of student to you remove from your record:--"),input("enter the rollnumber:--"),input("enter the rename name Here:--"))
 
 
+            case 3:
+                remove_student(input("enter the remove student_name:-"),input("enter the rollno of student:-"),input("enter the student_marks:-"))
+                
+            case 4:
+                file = open("python1.txt","r")
+                data = file.readlines()
+                
+                for i in range(0,len(data),1):
+                    print(data[i])
+           
+                file.close()
 
+            case 5:
+                break
+            
+            case _:
+                print("invalid choice")
+                
+            
+    
+
+system()
+
+##data = [1,2,3,4,5,6]
+##
+##
+##data2 = dict(data)
+##
+##print(type(data2))
+##
+##
+##
+##
 
 
 
