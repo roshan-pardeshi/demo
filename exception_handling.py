@@ -645,23 +645,123 @@
 ##    print(a)
 
 
-class MarksOutOfRangeError(Exception):
-    pass
+##class MarksOutOfRangeError(Exception):
+##    pass
+##
+##
+##try:
+##    student_marks = int(input("enter the marks"))
+##
+##
+##    if student_marks<0 or student_marks>100:
+##        raise MarksOutOfRangeError
+##
+##
+##except MarksOutOfRangeError:
+##    print("marks out of range")
+##
+##else:
+##    print(student_marks)
 
 
-try:
-    student_marks = int(input("enter the marks"))
+##class A:
+##
+##    def __init__(self,name,address,a,b):
+##        self.name = name
+##        self.address = address
+##
+##    def __str__(self):
+##
+##        return f"the name is a {self.name} and address {self.address}"
+##    
+##    def __add__(self):
+##
+##        return f"addition{self.a+self.b}"
+##
+##
+##n = int(input("enter how many times you perfrom the operation"))
+##li = []
+##
+##
+##
+##for i in range(n):
+##    a = A(input("enter the a name:-"),input("enter the address"),10,20)
+##    li.append(a)
+##
+##
+##
+##for i in li:
+##    print(i)
 
 
-    if student_marks<0 or student_marks>100:
-        raise MarksOutOfRangeError
 
 
-except MarksOutOfRangeError:
-    print("marks out of range")
 
-else:
-    print(student_marks)
+
+##
+##num = 1001
+##
+##num = str(num)
+##
+##
+##if num==num[::-1]:
+##    print("palindrome number")
+##else:
+##    print("not a palindrome number")
+##
+
+
+
+def factorial(n):
+    num = n
+
+    fact = 1
+
+    for i in range(1,num+1,1):
+        fact*=i
+
+    return fact
+
+def strong(n):
+    num = n
+    sum1 = 0
+    for i in str(num):
+        sum1+=factorial(int(i))
+
+
+    if sum1==num:
+        print("its a strong number",num)
+##    else:
+##        print("not a strong number")
+
+
+for i in range(0,10000,1):
+    strong(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
