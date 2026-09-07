@@ -424,45 +424,154 @@ li = [1,2,3,4,5,6,7,8,9,10]
 
 
 
-li =[100,200,300,400,100,100,1100]
-max2=[]
-
-max1 = li[0]
-max2=[]
-for i in li:
-    if max1<i:
-        max1=i
-        
-
-li.remove(max1)
-max2=li[0]
-for i in li:
-    if max2<i:
-        max2=i
-        
-
-    
-####
-print(max2)
-
-
-
-
-
+##li =[100,200,300,400,100,100,1100]
+##max2=[]
+##
+##max1 = li[0]
+##max2=[]
+##for i in li:
+##    if max1<i:
+##        max1=i
+##        
+##
+##li.remove(max1)
+##max2=li[0]
+##for i in li:
+##    if max2<i:
+##        max2=i
+##        
+##
+##    
+######
+##print(max2)
+##
+##
+##
 
 
-
-
-
-
-
+##file = open("text.txt","w")
+##
+##file.write("roshan\nsonu\nrohit\nmanish\nmohit")
+##
+##file.close()
 
 
 
 
+##file = open("text.txt","r")
+##
+##            
+##
+##print(file.read())
+##
+##file.close()
 
 
 
+
+
+
+
+
+
+##file = open("text.txt","r")
+##
+##data = file.readlines()
+##count=0
+##for i in data:
+##    count+=1
+##
+##print(count)
+##
+##file.close()
+
+##file = open("text.txt","r")
+##
+##data = file.readlines()
+##
+##for i in data:
+##    print(i.strip())
+
+##file = open("text.txt","a")
+##
+##file.write("vijay")
+##
+##file.close()
+##
+##file=open("text.txt","r")
+##
+##print(file.read())
+##
+##file.close()
+
+
+##file = open("text2.txt","x")
+
+
+##file = open("text.txt","r+")
+##
+##data=file.readlines()
+##
+##
+##file1 = open("text2.txt","w")
+##
+##file1.writelines(data)
+##
+##file.close()
+##file1.close()
+
+##file = open("text2.txt","r")
+##
+##print(file.read())
+##
+##file.close()
+
+##file = open("text2.txt","w")
+##
+##file.write("10\n20\n30\n40\n50")
+##
+##file.close()
+
+##
+##file = open("text2.txt","r")
+##
+##data = file.readlines()
+##
+##
+##sum1 = 0
+##
+##for i in data:
+##    sum1+=int(i)
+##
+##
+##print(sum1)
+
+
+
+##file = open("text.txt","w")
+##
+##file.write("roshan\nsonu\nrohit\nmanish\nmohit")
+##
+##file.close()
+
+##
+##file = open("text.txt","r")
+##
+##data = file.readlines()
+##
+##for i in data:
+##    if i.startswith("r") or i.startswith("i") or i.startswith("o") or i.startswith("u"):
+##        print(i)
+####    else:
+####        print(i.strip())
+##
+##
+##file = open("text.txt","r")
+##
+##data = file.readlines()
+##
+##for i in data:
+##    print(i.strip())
 
 
 
