@@ -690,22 +690,58 @@ class InvalidRollNumberError(Exception):
 ##print(res[1])
 
 
-class MarksOutOfRange(Exception):
-    pass
+##class MarksOutOfRange(Exception):
+##    pass
+##
+##
+##try:
+##    marks =4 int(input("enter the marks:-"))
+##
+##    if marks<0 or marks>100:
+##        raise MarksOutOfRange
+##
+##except MarksOutOfRange:
+##    print("marks out of the range")
+##
+##else:
+##    print("not out of the range")
+##    
 
 
-try:
-    marks = int(input("enter the marks:-"))
 
-    if marks<0 or marks>100:
-        raise MarksOutOfRange
 
-except MarksOutOfRange:
-    print("marks out of the range")
 
-else:
-    print("not out of the range")
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
