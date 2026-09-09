@@ -573,9 +573,255 @@ li = [1,2,3,4,5,6,7,8,9,10]
 ##for i in data:
 ##    print(i.strip())
 
+##
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##
+##print(li[::-1])
+
+##
+##st = "roshan"
+##
+##li1 = "sonu"
+##
+##
+##for i in range(0,len(st),1):
+##
+##    if st[i] in li1:
+##        print(st[i])
 
 
 
+
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##
+##for i in li:
+##    if i%2==0:
+##        print(i)
+##
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##
+##for i in li:
+##
+##    if i%3==0:
+##        print("hazaa")
+##    elif i%5==0:
+##        print("fizaa")
+##    else:
+##        print(i)
+
+##
+##li  = [1,2,3,4,5,6,7,8,9,10]
+##
+##count =0
+##for i in li:
+##    if i%2==0:
+##        count+=1
+##    
+##
+##
+##
+##
+##print(count)
+
+##
+##li = [1,2,3,4,5,6,6,6]
+##
+##
+##print(max(li))
+##
+##print(min(li))
+##
+##print(li.count(1))
+##
+##li = [1,2,3,4,5,6,7,1]
+##count = 0
+##
+##for i in range(0,len(li),1):
+##    if li.count(i)>1:
+##        count+=li[i]
+##
+##
+##print(count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##li = [1,2,3,4,5,6,7,1,2,3,4]
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##    if li[i] in li1:
+##        pass
+##    else:
+##        li1.append(li[i])
+##
+##
+##print(li1)
+
+
+
+##
+##li = [10,20,40,300,1200,42,2001,1100]
+##
+##max1 = li[0]
+##
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##        li.remove(max1)
+##
+##
+##
+##max2 = 0
+##
+##for i in li:
+##    if max2<i:
+##        max2 = i
+##
+##print(max2)
+
+
+##tu = (10,20,30,10,10,40,50)
+##
+##print(tu.count(10))
+
+##st = "aabbcdd"
+##
+##for i in range(0,len(st),1):
+##    count = st.count(st[i])
+##
+##
+##    if count==1:
+##        print(st[i])
+    
+    
+##st = "listen"
+##st2 = "slient"
+##
+##for i in range(0,len(st),1):
+##    if len(st)==len(st2):
+##        if st[i] in st2:
+##            print(st[i])
+
+
+##
+##li = [1,2,3,4,5,1,2]
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##
+##    if li.count(li[i])>1 and li[i] not in  li1:
+##        li1.append(li[i])
+##
+##print(li1)
+    
+
+##li = [1,2,3,4,5,6,7,8,9]
+##
+##print(li[::-1])
+
+##
+##li = [1,0,2,0,4,5,6]
+##
+##count = 0
+##li1=[]
+##for i in range(0,len(li),1):
+##
+##    if li[i]==0:
+##        count+=1
+##    else:
+##        li1.append(li[i])
+##for i in range(count):
+##    li1.append(0)
+##print(li1)      
+
+
+##li = [1,2,3,4]
+##
+##li1 = [1,2,4,5,7]
+##
+##li = set(li)
+##li1 = set(li1)
+##
+##print(li.intersection(li1))
+##
+
+
+##word = ["roshan","sonu","pardeshi","sonumonu"]
+##size = word[0]
+##
+##for i in word:
+##    if len(i)>len(size):
+##        size = i
+##
+##
+##print(i)
+
+##st = "python programming"
+##
+##count = 0
+##
+##for i in st:
+##    if i=="a" or i=="e" or i=="o" or i=="u" or i=="i":
+##        count+=1
+##
+##
+##print(count)
+    
+##li = [1,2,3,4,5,6,5]
+##
+##re = 0
+##
+##for i in range(0,len(li),1):
+##
+##    if li.count(li[i])>1:
+##        re=li[i]
+
+##print(re)
+
+
+
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##    for j in range(i+1):
+##        if i+j==10 and i>j:
+##            li1.append(li[j])
+##
+##
+##print(li1)
+
+
+##
+##words = ["python", "java", "python", "c", "java", "python"]
+##
+##
+##for i in range(0,len(words),1):
+##
+##    count = words.count(words[i])
+##
+##    if count>2:
+##        print(words[i])
+##        break
 
 
 

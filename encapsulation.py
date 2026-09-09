@@ -499,85 +499,135 @@
 ##b = C()
 ##
 ##b.show1()
-
-
-
-
-class A:
-
-    a = 20
-
-class B(A):
-
-    b = 20
-
-class C(A):
-
-    c = 30
-
-
-
-class D(B,C):
-
-    def show(self):
-
-        print(self.a+self.b+self.c)
-
-a = D()
-
-a.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+##
+##
+
+##
+##class A:
+##
+##    a = 20
+##
+##class B(A):
+##
+##    b = 20
+##
+##class C(A):
+##
+##    c = 30
+##
+##
+##
+##class D(B,C):
+##
+##    def show(self):
+##
+##        print(self.a+self.b+self.c)
+##
+##a = D()
+##
+##a.show()
+
+
+
+
+##
+##li= [3,1,3,4,4,5,4]
+##max1 = 0
+##for i in li:
+##
+##    if li.count(i)>1:
+##        max1 = i
+##
+##
+##print(max1)
+
+
+##li  = [3,2,4]
+##li1 = []
+##
+##for i in range(1,len(li),1):
+##    if li[i]%2==0:
+##        li1.append(i)
+##
+##print(li1)
+
+
+##li = [2,7,11,15]
+##
+##li1 = []
+##
+##for i in li:
+##    print(i[2]+2)
+##
+##print(li1)
+
+
+
+
+
+##li = [2,7,11,15]
+##
+##li1=[]
+##for i in range(0,len(li),1):
+##    for j in range(i+1,len(li)):
+##        if li[i]+li[j]==9:
+##            li1.append(i)
+##            li1.append(j)
+##
+##
+##print(li1)
+
+
+
+
+
+##
+##num = 12
+##
+##
+##
+##num = str(num)
+##
+##if num==num[::-1]:
+##    print("palindrome number")
+##
+##else:
+##    print("not  palndrome")
+##
+
+##def factorial(n):
+##
+##    num = n
+##
+##    fact = 1
+##
+##    for i in range(1,num+1,1):
+##        fact*=i
+##
+##    return fact
+##
+##
+##num = 14
+##sum1 = 0
+##for i in str(num):
+##    sum1+=factorial(int(i))
+##
+##
+##
+##if sum1==num:
+##    print("strong number")
+##
+
+##num = 28
+##cube=0
+##for i in range(num):
+##    a = num%2
+##    cube = cube+a
+##    num=num//2
+##
+##    
+##print(cube)
+##print(a)
 
 
 
