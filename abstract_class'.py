@@ -729,26 +729,383 @@ from abc import ABC,abstractmethod
 
 
 
+##
+##num = 121
+##
+##
+##num = str(num)
+##
+##if num==num[::-1]:
+##    print("palindrome number")
+##else:
+##    print("not a palindrome number")
+
+
+##
+##a = 0
+##
+##b = 1
+##
+##for i in range(0,21,1):
+##    if a>51 and a<100:
+##        print(a)
+##    c = a+b
+##    a=b
+##    b=c
+##        
+    
+##num = 153
+##
+##n = len(str(num))
+##
+##
+##no = num
+##
+##amg = 0
+##
+##for i in range(0,num,1):
+##    a = no%10
+##    amg = amg + a**n
+##    no = no//10
+##
+##
+##if amg==num:
+##    print("amstrong number")
+##
+##else:
+##    print("not a amstong number")
+
+##
+##
+##
+##num = int(input("enter the a number"))
+##
+##factor = 0
+##
+##for i in range(2,num-1,1):
+##    if num%i==0:
+##        factor+=1
+##
+##if factor==0:
+##    print("prime number ")
+##
+##else:
+##    print("not a prime number:")
+##
+##num = 9
+##
+##num1 = num**2
+##sum1=0
+##for i in str(num1):
+##    sum1+=int(i)
+##
+##
+##
+##if sum1==num:
+##    print("neon number",sum1)
+##else:
+##    print("not a neon number")
 
 
 
 
 
+##def factorial(n):
+##
+##    num = n
+##
+##    fact = 1
+##
+##    for i in range(1,num+1,1):
+##        fact*=i
+##
+##    return fact
+##
+##def strong(n):
+##
+##    num  = n
+##
+##    sum1 = 0 
+##
+##    for i in str(num):
+##        sum1+=factorial(int(i))
+##
+##    if sum1==num:
+##        print("strong number",num)
+##   
+##
+##for i in range(0,100000,1):
+##    strong(i)
 
-        
+
+
+##class special_charter_error(Exception):
+##    pass
+##
+##try:
+##    a = input("enter the a any datatype value")
+##
+##
+##    if a.isdigit() or a.isalpha():
+##        pass
+##    else:
+##        raise special_charter_error
+##
+##except special_charter_error:
+##    print("you insert the special charter")
+##
+##else:
+##    print(a)
     
 
 
+##
+##class A:
+##
+##    a = 20
+##
+##    def static():
+##        print(A.a)
+##
+##    def non_static(self):
+##        print(self.a)
+##
+##a = A()
+##
+##A.static()
+##
+##a.non_static()
+
+
+
+##class A:
+##
+##    def static():
+##        print("sattic",a1.a)
+##
+##    def Non_static(self):
+##        print(self.a)
+##
+##a1 = A()
+##
+##a1.a=30
+##
+##A.static()
+##
+##a1.Non_static()
+
+
+
+##def A():
+##
+##    print("class A")
+##
+##    def B():
+##        print("class B")
+##
+##        def C():
+##            print("class C")
+##
+##        return C
+##    return B
+##    
+##
+##
+##a = A()
+##
+##c = a()
+##
+##c()
 
 
 
 
 
+##students = {
+##    "Rahul": [70, 80, 90],
+##    "Amit": [85, 75, 95],
+##    "Sneha": [90, 92, 88]
+##}
+
+##
+##
+##res = dict(map(lambda x:(x[0],x[1]+2),students.items()))
+##
+##print(res)
+##
+##a = students.values()
+##div = 0
+##
+##for i in a:
+##    for j in i:
+##        div=j/3
+##
+##print(div)
+
+
+##
+##st = "python"
+##
+##for i in range(len(st)-1,-1,-1):
+##    print(st[i],end="")
+
+
+##st = "madam"
+##
+##if st==st[::-1]:
+##    print("palindrome string")
+##else:
+##    print("not palindrome string")
+
+
+
+
+##
+##
+##li = [10,20,30,400,300,1000]
+##
+##
+##max1 = li[0]
+##
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##
+##
+##li.remove(max1)
+##
+##max2 = li[0]
+##
+##for i in li:
+##    if max2<i:
+##        max2=i
+##print(max2)
+
+##
+##li = [1,2,3,4,5,5,6,1,2,3,4]
+##
+##
+##li1 = []
+##
+##
+##for i in range(len(li)):
+##
+##    if li[i] in li1:
+##        pass
+##    else:
+##        li1.append(li[i])
+##
+##print(li1)
+
+##li = [1,2,3,4,2,3,4]
+##
+##
+##for i in range(len(li)):
+##    if li.count(i)>1:
+##        print(li[i])
+
+
+##st = "python programming language"
+##
+##count_vowels = 0
+##
+##count_consonets = 0
+##
+##
+##for i in st:
+##    if i=="a" or i=="e" or i=="i" or i=="o" or i=="u":
+##        print("vowels")
+##        print(i)
+##        count_vowels+=1
+##    else:
+##        print("consonets")
+##        print(i)
+##        count_consonets+=1
+##
+##print("total vowels",count_vowels)
+##print("total consonets",count_consonets)
+##
+##li = [3,6,5,8,1]
+##
+##li1=[]
+##for i in range(len(li)):
+##    for j in range(i+1,len(li),1):
+##        if li[i]+li[j]==9:
+##            li1.append(li[i])
+##            li1.append(li[j])
+##
+##print(li1)
+    
+##li = "listen"
+##
+##li1= "silten"
+##
+##
+##for i in li:
+##    if i in li1:
+##        print("anagrams",i)
+
+
+##st = "aabbcddff"
+##
+##for i in range(0,len(st),1):
+##
+##    count = st.count(st[i])
+##
+##
+##    if count==1:
+##        print(st[i])
+
+
+
+##li = [1,2,3,4,5,3,3]
+##
+##c=[]
+##
+##for i in range(0,len(li),1):
+##
+##    count = li.count(li[i])
+##
+##    if count>1:
+##        c = li[i]
+##
+##
+##print(c)
+
+
+
+
+##
+##li = [0,1,0,2,3,4,5]
+##li1=[]
+##count=0
+##for i in range(0,len(li),1):
+##
+##    if li[i]==0:
+##        count+=1
+##    else:
+##        li1.append(li[i])
+
+##for i in range(count):
+##    li1.append(0)
+##
+##print(li1)
 
 
 
 
 
+##li = ["roshan","pardeshi","sonu","monusonu"]
+##
+##max1 = li[0]
+##
+##for i in range(0,len(li),1):
+##    if len(max1)<=len(li[i]):
+##        max1.append(li[i])
+##
+##
+##print(max1)
 
 
 
