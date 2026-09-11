@@ -80,12 +80,12 @@
 ##a.area_of(10,20)
 
 
-class A:
+# class A:
 
-    def __init__(self,name,age):
+#     def __init__(self,name,age):
 
-        self.name = name
-        self.age = age
+#         self.name = name
+#         self.age = age
 
 
 
@@ -542,8 +542,8 @@ class A:
 ##    print("your password is a:-",pass_word)
 
 
-class InvalidRollNumberError(Exception):
-    pass
+# class InvalidRollNumberError(Exception):
+#     pass
 
 ##
 ##try:
@@ -690,46 +690,71 @@ class InvalidRollNumberError(Exception):
 ##print(res[1])
 
 
-##class MarksOutOfRange(Exception):
-##    pass
-##
-##
-##try:
-##    marks =4 int(input("enter the marks:-"))
-##
-##    if marks<0 or marks>100:
-##        raise MarksOutOfRange
-##
-##except MarksOutOfRange:
-##    print("marks out of the range")
-##
-##else:
-##    print("not out of the range")
-##    
+# class MarksOutOfRange(Exception):
+#    pass
 
 
+# try:
+#    marks =4 int(input("enter the marks:-"))
+
+#    if marks<0 or marks>100:
+#        raise MarksOutOfRange
+
+# except MarksOutOfRange:
+#    print("marks out of the range")
+
+# else:
+#    print("not out of the range")
+   
+# print("hellow")
 
 
+student = {"roshan":100,"sonu":90,"monu":80,"krishna":70,"tushar":99}
+
+# print(student["roshan"])
+# student["roshan"]=201
+
+# print(student.items())
+# print(student.keys())
+# print(student.values())
+
+# print(student)
 
 
+# student.update({"roshan":3000})
+
+# print(student)
 
 
+# print(student.keys())
+# print(student.values())
+# print(student.items())
+# print(student)
+# print(student.get("roshan"))
+# print(student.get("roshan",3000))
+# print(student.get("roshan",3000))
 
 
+# for i in student.values():
+#     if i>=80:
+#         print(i)
+
+# res = dict(filter(lambda x:x[1]>=80,student.items()))
+
+# print("result is a:-",res)
 
 
+# try:
+#     d1 = {}
 
+#     for i in range(0,5,1):
+#         a = int(input("enter the number"))
+#         d1[i]=a
 
+#     print(d1)
 
-
-
-
-
-
-
-
-
-
+# except ValueError:
+#     print("plz enter the a number not a string")
 
 
 
