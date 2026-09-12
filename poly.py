@@ -857,30 +857,57 @@
 ##    
 
 
+##
+##from abc import ABC,abstractmethod
+##
+##class Appliance(ABC):
+##
+##    @abstractmethod
+##    def turn_on(self):
+##        pass
+##
+##class TV(Appliance):
+##
+##    def turn_on(self):
+##        print("the Tv is turn on if you click the button and play the song")
+##
+##class Washingmachine(Appliance):
+##
+##    def turn_on(self):
+##        print("the washing mashingmachine is a on if you put the clothes")
+##
+##a  = TV()
+##a.turn_on()
+##
+##b = Washingmachine()
+##b.turn_on()
 
-from abc import ABC,abstractmethod
 
-class Appliance(ABC):
 
-    @abstractmethod
-    def turn_on(self):
-        pass
+class emp:
 
-class TV(Appliance):
+    company = "abc"
 
-    def turn_on(self):
-        print("the Tv is turn on if you click the button and play the song")
+    def __init(self,name):
+        self.name = name
 
-class Washingmachine(Appliance):
+    def change_company(self):
+        self.company = "XYZ"
 
-    def turn_on(self):
-        print("the washing mashingmachine is a on if you put the clothes")
 
-a  = TV()
-a.turn_on()
+e1 = emp("roshan")
 
-b = Washingmachine()
-b.turn_on()
+e2 = emp("amit")
+
+e1.change_company()
+
+print(e1.company)
+print(e2.company)
+
+print(emp.company)
+
+
+
 
 
 

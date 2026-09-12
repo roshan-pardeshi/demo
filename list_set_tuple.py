@@ -827,6 +827,109 @@ li = [1,2,3,4,5,6,7,8,9,10]
 
 
 
+##li = [1,2,3,1,2,13,24,1]
+##
+##li1= []
+##
+##
+##for i in range(0,len(li),1):
+##
+##    if li[i] not in li1:
+##        li1.append(li[i])
+##
+##print(li1)
+
+
+
+
+##li = [1,2,3,4,5,6,7,8,9,10]
+
+
+##res = list(map(lambda x:x*2,li))
+##
+##print(res)
+
+
+
+##res = list(filter(lambda x:x%2==0,li))
+##
+##print(res)
+
+##
+##d1 = {1:20,2:30,3:40,4:40}
+##
+##res = dict(map(lambda x:(x[0]+1,x[1]*2),d1.items()))
+##
+##print(res)
+
+##
+##d1 = {}
+##
+##for i in range(0,3,1):
+##    a = int(input("enter:-"))
+##    b = input("enter the string:")
+##    d1[b]=a
+##
+##
+##print(d1)
+
+
+
+
+##file = open("python.txt","r")
+##
+##data = file.readlines()
+##
+####for i in data:
+####    if i[1]:
+####        print(i.split())
+##
+##for i in range(0,len(data),1):
+##    if data[i]=="roshan":
+##        data[0]
+##    
+##
+##file.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
