@@ -208,41 +208,89 @@
 ##obj.reverse_number()
 
 
-
-class Even:
-
-    def even_number(self):
-
-        for i in range(1,21,1):
-            if i%2==0:
-                print(i)
-
-obj = Even()
-obj.even_number()
-
-
+##
+##class Even:
+##
+##    def even_number(self):
+##
+##        for i in range(1,21,1):
+##            if i%2==0:
+##                print(i)
+##
+##obj = Even()
+##obj.even_number()
 
 
-
-
-
-
-
-
-
-
-
-
-
+##
+##class A:
+##
+##    def odd_number(self):
+##
+##        for i in range(11):
+##            if i%2!=0:
+##                print(i)
+##
+##obj = A()
+##obj.odd_number()
 
 
 
 
+##class A:
+##
+##    def table(self):
+##
+##        for i in range(1,11,1):
+##
+##            print(i,"table:-",i**3,"cube",i**3)
+##
+##obj = A()
+##obj.table()
 
 
 
+##
+##
+##class A:
+##
+##    def star_pattern(self):
+##
+##        for i in range(0,5,1):
+##            for j in range(0,i,1):
+##                print(i,end="")
+##            print()
+##            
+##obj = A()
+##obj.star_pattern()
 
 
+
+##class Countdown:
+##
+##    def countdrown(self):
+##
+##        for i in range(20,0,-1):
+##            print(i)
+##
+##
+##obj = Countdown()
+##obj.countdrown()
+
+
+for i in range(0,10,1):
+    for  j in range(0,10,1):
+        if i==0 or j==9 or i==9 or j==0 or j==1:
+            print("*",end=" ")
+
+        elif i==1 or i==4 and j==8:
+            print("*",end=" ")
+
+        
+
+        else:
+            print("*"*j)
+
+    print()
 
 
 
