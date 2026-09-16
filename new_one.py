@@ -1,7 +1,4 @@
 
-
-
-
 li = [[1,"Iphone 13",100000],[2,"Iphone 13 Pro",110000],[3,"Iphone 14",120000],[4,"Iphone 14 Pro",130000]]
 
 
@@ -9,8 +6,6 @@ def View_Product():
     print("\n********************Product List********************\n")
     for i in li:
         print(i)
-
-
 
 cart = []
 
@@ -26,6 +21,7 @@ def Add_Cart():
 
         # For stored the Cart ID
         li2=[]
+        sum1=0
         for i in cart:
             li2.append(i)
             print(i)
@@ -35,16 +31,21 @@ def Add_Cart():
 
             #check the id is preset already perent in a cart then increase it 
             if user in li2:
-               cart[1]+=1
+               quantity = int(input("Enter the Quantity:-"))
+               cart.append(quantity)
 
             #if id not present add it product
                
             else:
                 for i in range(0,len(li),1):
                     if li[i][0]==user:
-                        quantity = int(input("Enter the Quantity:-"))
                         cart.append(li[i])
-                        cart.append(quantity)          
+##                        cart.append(quantity)
+
+                for i in range(0,len(cart),1):
+                    sum1+=1
+
+                cart.append(sum1)
         else:
             print("\n     /// Product Id is Not Present \\\     ")
                         
@@ -61,17 +62,15 @@ def Remove_Cart():
             
 
 def Total_bill():
-    sum1=[]
+    sum1 = []
 
     for i in range(0,len(cart),1):
-        for j in range(0,len(cart),1):
-            if cart[i][j]==cart[0][2]:
-                print("ahe re")
-            
-##            print(cart[i][j])
+        sum1.append(cart[i])
 
+    print(sum1)
 
-
+##    for i in range(0,len(cart),1):
+##        if cart[i
 def View_Cart():
     print(cart)
 
