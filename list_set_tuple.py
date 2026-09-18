@@ -1,201 +1,201 @@
-
 ##
-##li = [(1,2),(3,4),(1,2)]
-##
-##
-##li = set(li)
-##
-##print(li)
-
-
-##st = ["amit","rahul","priya","amit","neha","rahul"]
-##
-##st = set(st)
-##
-##print(st)
-##
-##
-##st = tuple(st)
-##
-##print(type(st))
-##
-##print(sorted(st))
-##
-
-##li = [1,2,3,4,5,6]
-##
-##print(type(li))
-##
-##li = tuple(li)
-##print(type(li))
-##
-##li = set(li)
-##print(type(li))
-
-
-##
-##li = [10,20,30,40,50]
-##
-##li1 = (30,40,50,60)
-
-##li = set(li)
-##
-##li1 = set(li1)
-##
-##
-##print(li.intersection(li1))
-
-##
-##a = [1,2,3,4,5]
-##
-##b = (4,5,6,7,8)
-##
-##a = set(a)
-##
-##b = set(b)
-##
-##
-##print(a.intersection(b))
-##
-##print(a.difference(b))
-##
-##
-##print(b.difference(a))
-##
-##
-##print(a.symmetric_difference(b))
-##
-##print(a.union(b))
-
-##num = [10,20,30,40,50,10,20,30]
-##
-##num1=[]
-##
-##
-##for i in range(len(num)):
-##    if num[i] not in num1:
-####        num1.append(num[i])
-##        pass
-##    else:
-##        print(num[i])
-##
-##print(num1)
-##
-
-
-
-
-##
-##li = [10,20,10,30,40,20,50]
-##
-##num = []
-##for i in li:
-##    if li.count(i)>1 and i not in num:
-##        pass
-##    else:
-##        num.append(i)
-##
-##print(num)
-
-
-##li = [10,20,30,40,50]
-##
-##li =set(li)
-##
-##tu = (30,40,50,60)
-##
-##tu = set(tu)
-##
-##se = {40,50,60}
-##
-##num = li.intersection(tu)
-##
-##print(num.intersection(se))
-
-
-##li = []
-##
-##n = int(input("enter:-"))
-##
-##for i in range(0,n,1):
-##    a = int(input("enter the number"))
-##    li.append(a)
-##
-##
-##for i in li:
-##    
-##
-##word = ["python","java","python","sql","java","html","sql"]
-##
-####count = 0
-##
-##
-####for i in word:
-####    count+=1
+####
+####li = [(1,2),(3,4),(1,2)]
 ####
 ####
-####print(count)
-##    
-##
-##word = set(word)
-##
-##print(word)
+####li = set(li)
+####
+####print(li)
 ##
 ##
-##print(sorted(word))
+####st = ["amit","rahul","priya","amit","neha","rahul"]
+####
+####st = set(st)
+####
+####print(st)
+####
+####
+####st = tuple(st)
+####
+####print(type(st))
+####
+####print(sorted(st))
+####
 ##
-##stu = [("amit",85),
-##       ("rahul",72),
-##       ("roshan",90),
-##       ("neha",75)
+####li = [1,2,3,4,5,6]
+####
+####print(type(li))
+####
+####li = tuple(li)
+####print(type(li))
+####
+####li = set(li)
+####print(type(li))
+##
+##
+####
+####li = [10,20,30,40,50]
+####
+####li1 = (30,40,50,60)
+##
+####li = set(li)
+####
+####li1 = set(li1)
+####
+####
+####print(li.intersection(li1))
+##
+####
+####a = [1,2,3,4,5]
+####
+####b = (4,5,6,7,8)
+####
+####a = set(a)
+####
+####b = set(b)
+####
+####
+####print(a.intersection(b))
+####
+####print(a.difference(b))
+####
+####
+####print(b.difference(a))
+####
+####
+####print(a.symmetric_difference(b))
+####
+####print(a.union(b))
+##
+####num = [10,20,30,40,50,10,20,30]
+####
+####num1=[]
+####
+####
+####for i in range(len(num)):
+####    if num[i] not in num1:
+######        num1.append(num[i])
+####        pass
+####    else:
+####        print(num[i])
+####
+####print(num1)
+####
+##
+##
+##
+##
+####
+####li = [10,20,10,30,40,20,50]
+####
+####num = []
+####for i in li:
+####    if li.count(i)>1 and i not in num:
+####        pass
+####    else:
+####        num.append(i)
+####
+####print(num)
+##
+##
+####li = [10,20,30,40,50]
+####
+####li =set(li)
+####
+####tu = (30,40,50,60)
+####
+####tu = set(tu)
+####
+####se = {40,50,60}
+####
+####num = li.intersection(tu)
+####
+####print(num.intersection(se))
+##
+##
+####li = []
+####
+####n = int(input("enter:-"))
+####
+####for i in range(0,n,1):
+####    a = int(input("enter the number"))
+####    li.append(a)
+####
+####
+####for i in li:
+####    
+####
+####word = ["python","java","python","sql","java","html","sql"]
+####
+######count = 0
+####
+####
+######for i in word:
+######    count+=1
+######
+######
+######print(count)
+####    
+####
+####word = set(word)
+####
+####print(word)
+####
+####
+####print(sorted(word))
+####
+####stu = [("amit",85),
+####       ("rahul",72),
+####       ("roshan",90),
+####       ("neha",75)
+####       ]
+####
+####
+####print(stu[0][0])
+####
+####
+####for i in stu:
+####    print(i[0])
+##
+####stu = [("amit",85),
+####       ("rahul",72),
+####       ("roshan",90),
+####       ("neha",75)
+####       ]
+####
+####for i in stu:
+####    print(i[1]/4)
+##
+##
+##emp = [("amit","IT",50000),
+##       ("rahul","HR",60000),
+##       ("priya","IT",78000),
+##       ("Neha","sales",45000)
 ##       ]
+####
+####for i in emp:
+####    if i[1]=="IT":
+####        print(i)
+####
+####for i in emp:
+####    if i[2]>50000:
+####        print(i)
+######        
+####
+####for i in emp:
+####    print(i[2]/4)
+####    
+####a = []
+####
+####for i in emp:
+####    print(set(i[0]))
 ##
 ##
-##print(stu[0][0])
-##
-##
-##for i in stu:
-##    print(i[0])
-
-##stu = [("amit",85),
-##       ("rahul",72),
-##       ("roshan",90),
-##       ("neha",75)
-##       ]
-##
-##for i in stu:
-##    print(i[1]/4)
-
-
-emp = [("amit","IT",50000),
-       ("rahul","HR",60000),
-       ("priya","IT",78000),
-       ("Neha","sales",45000)
-       ]
-##
-##for i in emp:
-##    if i[1]=="IT":
-##        print(i)
-##
-##for i in emp:
-##    if i[2]>50000:
-##        print(i)
-####        
-##
-##for i in emp:
-##    print(i[2]/4)
-##    
-##a = []
-##
-##for i in emp:
-##    print(set(i[0]))
-
-
-##
-##li = [10,20,30,40,50,40,50]
-##max1 = li[0]
-##
-##max2 = 0
+####
+####li = [10,20,30,40,50,40,50]
+####max1 = li[0]
+####
+####max2 = 0
 ##
 ##for i  in li:
 ##    if max1<i:
@@ -210,7 +210,7 @@ emp = [("amit","IT",50000),
 
     
 ##
-stu = {"amit":10,"roshan":20,"ravi":99,"sita":100,"neha":100}
+##stu = {"amit":10,"roshan":20,"ravi":99,"sita":100,"neha":100}
 ##
 ##
 ##print(stu.keys())
@@ -273,7 +273,7 @@ stu = {"amit":10,"roshan":20,"ravi":99,"sita":100,"neha":100}
 ##
 ##print(val)
 
-li = [1,2,3,4,5,6,7,8,9,10]
+##li = [1,2,3,4,5,6,7,8,9,10]
 
 ##res = list(map(lambda x:x**2,li))
 ##
@@ -852,44 +852,133 @@ li = [1,2,3,4,5,6,7,8,9,10]
 
 
 ##res = list(filter(lambda x:x%2==0,li))
+####
+####print(res)
 ##
-##print(res)
+####
+####d1 = {1:20,2:30,3:40,4:40}
+####
+####res = dict(map(lambda x:(x[0]+1,x[1]*2),d1.items()))
+####
+####print(res)
+##
+####
+####d1 = {}
+####
+####for i in range(0,3,1):
+####    a = int(input("enter:-"))
+####    b = input("enter the string:")
+####    d1[b]=a
+####
+####
+####print(d1)
+##
+##
+##
+##
+####file = open("python.txt","r")
+####
+####data = file.readlines()
+####
+######for i in data:
+######    if i[1]:
+######        print(i.split())
+####
+####for i in range(0,len(data),1):
+####    if data[i]=="roshan":
+####        data[0]
+####    
+####
+####file.close()
+##
+##
+##
+
+
+##Find the second largest number in a list without using sort() or max().
+
+
+##li = [22,33,120,244,133,134,131,200,4000,4566]
 
 ##
-##d1 = {1:20,2:30,3:40,4:40}
+##max1 = li[0]
 ##
-##res = dict(map(lambda x:(x[0]+1,x[1]*2),d1.items()))
-##
-##print(res)
-
-##
-##d1 = {}
-##
-##for i in range(0,3,1):
-##    a = int(input("enter:-"))
-##    b = input("enter the string:")
-##    d1[b]=a
-##
-##
-##print(d1)
-
-
-
-
-##file = open("python.txt","r")
-##
-##data = file.readlines()
-##
-####for i in data:
-####    if i[1]:
-####        print(i.split())
-##
-##for i in range(0,len(data),1):
-##    if data[i]=="roshan":
-##        data[0]
+##for i in li:
+##    if max1<i:
+##        max1=i
 ##    
+####li.remove(max1)
 ##
-##file.close()
+##li.remove(max1)
+##
+##max2 = li[0]
+##
+##for i in li:
+##    if max2<i:
+##        max2=i
+####
+####print(max2)
+##
+##a = sorted(li)
+##
+##print(a[-2])
+
+
+##Find all duplicate elements in a list and print each duplicate only once.
+
+
+##li = [1,2,1,3,4,3,13,4,1,5,1]
+##li1=[]
+##for i in li:
+##    count = li.count(i)
+##
+##    if count>1:
+##        if i not in li1:
+##            li1.append(i)
+##
+##
+##print(li1)
+
+
+##Find the missing number from a list containing numbers from 1 to n.
+##
+##
+##li = [10,30,40,5,6,7,8]
+##li2 = 0
+##for i in range(10,len(li),1):
+##    if i not in li:
+##        print(i)
+
+##    
+##        
+
+
+##Count the frequency of each element in a list without using Counter.
+##
+##li = [2,2,3,1,3,1,2,3,4,3,4]
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##    count = li.count(li[i])
+##    
+##    print(li[i],count)
+##
+##
+##print(li1)
+
+
+##li = [2,2,3,1,3,1,2,3,4,3,4]
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##    if li[i] not in li1:
+##        count = li.count(li[i])
+##        print(li[i],"::",count)
+##        li1.append(li[i])
+##   
+####print(li1)
 
 
 
@@ -899,16 +988,238 @@ li = [1,2,3,4,5,6,7,8,9,10]
 
 
 
+##Check whether two strings are anagrams of each other without using sorted().
+
+
+##st = "listen"
+##st1 = "slient"
+##
+##for i in st:
+##    if i not in st1:
+##        print(i)
+##    else:
+##        print("anagrams")
+##
+
+
+##Move all zeros to the end of a list while keeping the order of the other elements unchanged.
+
+##li = [0, 0, 1, 0, 0, 2, 0]
+##
+##count=0
+##li1 = []
+##for i in li:
+##
+##    if i==0:
+##        count+=1
+##    else:
+##        li1.append(i)
+##
+##for i in range(count):
+##    li1.append(0)
+##
+##print(li1)
+##Example: [0, 5, 0, 2, 8, 0, 3] → [5, 2, 8, 3, 0, 0, 0]]
+
+
+##Find the longest word in a sentence without using max().
+
+##st = "roshan vijay ravisirkesehoapp pardeshi programming"
+##
+##st = st.split()
+##
+##size = ""
+##
+##
+##for i in st:
+##    if len(i)>len(size):
+##        size=i
+##
+##print(size)
+
+
+
+
+
+##Find the first non-repeating character in a string.
+
+##li = [1,2,3,4,5,2,3,1]
+##
+##
+##for i in li:
+##    count = li.count(i)
+##
+##    if count==1:
+##        print(i)
+##        break
+##
+##
+
+
+
+
+
+##Example: "aabbcde" → c
+
+##Find pairs of numbers whose sum equals a target.
+##
+##li = [1,2,3,4,5,7]
+##
+##target = 9
+##li1 = []
+##for i in range(0,len(li),1):
+##    for j in range(i+1,len(li)):
+##        if li[i]+li[j]==target:
+##            li1.append((li[i],li[j]))
+##
+##print(li1)
+            
 
 
 
 
 
 
+##Example: [2, 7, 4, 1, 5, 3], target = 8 → (1,7), (3,5)
+##Find the longest consecutive sequence in a list.
+##Example: [100, 4, 200, 1, 3, 2] → 1, 2, 3, 4 → length 4
+##
+
+####
+##li = [100, 4, 200, 1, 3, 2]
+##li1 = []
+##for i in li:
+##    if len(str(i))>1:
+##        pass
+##    else:
+##        li1.append(i)
+##
+##print(len(li1))
+
+##
+##
+##target = 0
+##
+##num = 8
+##
+##for i in range(1,num):
+##    if num % i==0:
+##        target+=i
+##
+##if target==num:
+##    print("perfect number")
 
 
 
 
+##def factorial(n):
+##
+##    num = n
+##
+##    fact = 1
+##
+##    for i in range(1,num+1,1):
+##        fact*=i
+##
+##
+##    return fact
+##
+##
+##num = 14
+##
+##sum1 = 0
+##for i in str(num):
+##    sum1+=factorial(int(i))
+##
+##
+##
+##if sum1 == num:
+##    print("strong number")
+##
+
+
+
+##print("hhiii")
+##num = 15
+##
+##a = len(str(num))
+##
+##no =  num
+##
+##c = 0
+##
+##for i in range(1,num+1,1):
+##    b = no%10
+##    c = c + b**a
+##    no = no//10
+##
+##
+##if c == num:
+##    print("amstrong number",c)
+##else:
+##    print("not a amstrong number")
+##    
+    
+
+
+
+
+
+##
+##li = [1,2,4,1,2,3,5,6,7,2,3,13,13,12,34]
+##
+##
+##li1 = []
+##
+##for i in range(0,len(li),1):
+##    if li[i] not in li1:
+##        count = li.count(li[i])
+##        if count>1:
+##
+##            print(li[i],":-:-:",count)
+##
+##            li1.append(li[i])
+
+
+
+##li = [0,0,1,2,3,4,0,0,1]
+##li2 = []
+##count = 0
+##for i in li:
+##    if i==0:
+##        count+=1
+##    else:
+##        li2.append(i)
+##
+##for i in range(count):
+##    li2.append(0)
+##
+##print(li2)
+
+##
+##li = [2,7,4,12,13,4,12,13,5,4]
+##
+##li1 = []
+##
+##for i in li:
+##    if i not in  li1:
+##        li1.append(i)
+##print(li1)
+##li1.append(4)
+##t = 9
+##li2 = []
+##for i in range(0,len(li1),1):
+##    for j in range(i+1,len(li1)):
+##        if li[i]+li[j]==t:
+##            li2.append((li1[i],li1[j]))
+##
+##print(li2)
+            
+
+
+
+
+import 
 
 
 
