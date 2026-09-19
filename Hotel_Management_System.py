@@ -68,26 +68,28 @@ def Booking_Room():
 
         else:
             li1 = []
-            if User in Rooms_id:
-                Name = input("\nEnter your name :--")
-                Address = input("\nEnter the address:--")
-                days = int(input("\nHow many days you Stay Here:--"))
-                sign_in_day = input("\nEnter Your Sign In date And Sign Out date:--")
-
-                for i in range(0,len(rooms),1):
-                    if rooms[i][3]=="Available" and rooms[i][0]==User:
-                        li1.append(Name)
-                        li1.append(Address)
-                        li1.append(rooms[i][0])
-                        li1.append(rooms[i][1])
-                        li1.append(rooms[i][2])
-                        li1.append(sign_in_day)
-                        li1.append(days)
-        
-
-            Book_Room.append(li1)
-            print("\n Room Book Successully")
-            
+            try:
+                if User in Rooms_id:
+                    for i in range(0,len(rooms),1):
+                        if rooms[i][0]==User and rooms[i][3]=="Available":
+                            Name = input("\nEnter your name :--")
+                            Address = input("\nEnter the address:--")
+                            days = int(input("\nHow many days you Stay Here:--"))
+                            sign_in_day = input("\nEnter Your Sign In date And Sign Out date:--")
+                            li1.append(Name)
+                            li1.append(Address)
+                            li1.append(rooms[i][0])
+                            li1.append(rooms[i][1])
+                            li1.append(rooms[i][2])
+                            li1.append(sign_in_day)
+                            li1.append(days)
+                    
+                Book_Room.append(li1)
+                print("\n Room Book Successully")
+                
+            except ValueError:
+                print("value error occurs")
+                
     except ValueError:
         print("\nPlz enter chareter value")
 
@@ -150,7 +152,7 @@ while True:
 
     
 
-
+##https://chocolate-candy-c79.notion.site/Youtube-Internship-roadmap-3dfd8c33330f806ca8f9df8090d3686a
 
 
 
