@@ -34,8 +34,7 @@
 ##        print(f"Name:{self.name} the a salary:{self.salary} the language:{self.language}")
 ##
 ##a = Developer()
-##a.display()
-##
+##a.display()##
 ##a.display_developer_details()
 
 
@@ -471,6 +470,95 @@ d1 = {"roshan":99,
 ##a = sorted(li)
 ##
 ##print(a[-2])
+
+
+##words = ["eat", "tea", "tan",'tae', "ate", "nat", "bat"]
+##
+##li = []
+##li1 = []
+##
+##for i in range(0,len(words),1):
+##    for j in range(0,len(words[i]),1):
+##        if words[j] not in li:
+##            li.append(words[j])
+## 
+##
+##    if words[i] not in li:
+##        li1.append(words[i])
+##
+##
+##
+##print(li)
+####
+##li3=[]
+##
+##li3.append([li,li1])
+##
+##print(li3)
+##        
+    
+##nums = [1, 1, 1, 2, 2, 3,4,3,5]
+##
+####li=[]
+####li1=[]
+####for i in range(len(nums)):
+####    count = nums.count(nums[i])
+####
+####    if count>1:
+####        print(nums[i])
+####
+####print(li)
+####        
+##
+##for i in nums:
+##    count = nums.count(i)
+##
+##    if count==1:
+##        print(i)
+##        break
+
+
+
+
+
+
+
+
+words = ["eat", "tea", "tan",'tae', "ate", "nat", "bat"]
+
+li = []
+li1 = {}
+
+##[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+for i in range(0,len(words),1):
+    for j in range(0,len(words[i]),1):
+        if words[i][j] not in li or words[i][j].startswith(words[j]):
+            li[i]=words[j]
+
+
+print(li)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

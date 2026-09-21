@@ -20,16 +20,16 @@ rooms = [
 
 def Check_Room_Available_in_Hotel():
     try:
+        user2 = int(input("\n Over Rooms Starting from 1000 to 3500 \nEnter Your Buget:=="))
         user1 = input("Enter the a room facilities:-- \n 1.Single \n 2.Double \n 3.Deluxe:--")
 
         Rooms_Facilities = list(map(lambda x:x[1],rooms))
         
-       
         if user1 in Rooms_Facilities:
-            print("Currently this Rooms are Available For You")
+            print("\nCurrently this Rooms are Available For You")
             for i in range(0,len(rooms),1):
-                    if rooms[i][3]=="Available" and rooms[i][1]==user1:
-                                print("\n    ",rooms[i])
+                    if rooms[i][3]=="Available" and rooms[i][1]==user1 and rooms[i][2]<=user2:
+                         print("\n    ",rooms[i])
         else:
             print("\nThis type of rooms are currently not available")
 
@@ -86,6 +86,10 @@ def Booking_Room():
                     
                 Book_Room.append(li1)
                 print("\n Room Book Successully")
+                file = open("python.txt","w")
+                file.writelines(str(Book_Room))
+                file.close()
+                print("error")
                 
             except ValueError:
                 print("value error occurs")
@@ -94,6 +98,152 @@ def Booking_Room():
         print("\nPlz enter chareter value")
 
 
+
+
+Food_veg2=[]
+def Food_order():
+
+    veg_food = [
+        [1, "Veg Thali", 180],
+        [2, "Paneer Butter Masala", 220],
+        [3, "Paneer Tikka", 240],
+        [4, "Mix Veg", 180],
+        [5, "Veg Kolhapuri", 190],
+        [6, "Palak Paneer", 210],
+        [7, "Dal Tadka", 140],
+        [8, "Jeera Rice", 120],
+        [9, "Veg Biryani", 180],
+        [10, "Butter Naan", 65]
+        ]
+
+
+    Non_veg_food = [
+        [11, "Chicken Biryani", 220],
+        [22, "Chicken Tikka", 250],
+        [33, "Butter Chicken", 280],
+        [44, "Chicken Handi", 260],
+        [55, "Chicken Kolhapuri", 270],
+        [66, "Mutton Biryani", 320],
+        [77, "Mutton Curry", 350],
+        [88, "Egg Curry", 160],
+        [99, "Chicken Fried Rice", 200],
+        [111, "Chicken Noodles", 210]
+    ]
+    print("\n1. Veg Food\n2.Non Veg Food\n3. View Your Order\n4. View Total Bil")
+    choice1 = int(input("\nEnter your choice for Order:--"))
+
+    while True:
+        try:
+            match(choice1):
+
+                case 1:
+                    print("\n1. View Menu\n2. Order Food\n3. View Total Order")
+
+                    choice2 = int(input("\nEnter Your Choice:---(Veg Food)---"))
+
+                    match(choice2):
+                     
+
+                            case 1:
+                                print("\n====================Veg Menu====================")
+                                for i in veg_food:
+                                    print("\n           ",i)
+                            case 2:
+                                user = int(input("Enter the food id:-"))
+                                food_id = list(map(lambda x:x[0],veg_food))
+                                food_book_id = list(map(lambda x:x[0],Food_veg2))
+
+                                if user not in food_id:
+                                    print("the id don't present in the a Menu")
+
+                                elif user in food_book_id:
+                                    print("\n Add more Quantity:")
+                                    quantity = int(input("\nEnter the Quantity Food Dish:-"))
+                                    for i in range(0,len(Food_veg2),1):
+                                        Food_veg2[i][3]+=quantity
+
+                                else:
+                                    Food_veg = []
+                                    for i in range(0,len(veg_food),1):
+                                        if user == veg_food[i][0]:
+                                            quantity = int(input("\nEnter the Quantity:--"))
+                                            Food_veg.append(veg_food[i][0])
+                                            Food_veg.append(veg_food[i][1])
+                                            Food_veg.append(veg_food[i][2])
+                                            Food_veg.append(quantity)
+
+
+                                    Food_veg2.append(Food_veg)
+                                    print("\n Order Book Succefully")
+##                            case 3:
+##                                for i in range(0,len(Food_veg2),1):
+##                                    print(Food_veg[i])
+                                   
+                case 2:            
+                    try:
+                        
+                            print("\n1. View Menu\n2. Order Food Non Veg Food")
+
+                            choice3 = int(input("\nEnter Your Choice:---(Non Veg)---"))
+
+                            match(choice3):
+                                 
+                                    case 1:
+                                        print("\n====================Non Veg Menu====================")
+                                        for i in Non_veg_food:
+                                            print("\n           ",i)
+                                            
+                                    case 2:
+                                        user = int(input("Enter the food id:-"))
+                                        food_id = list(map(lambda x:x[0],Non_veg_food))
+                                        food_book_id = list(map(lambda x:x[0],Food_veg2))
+
+                                        if user not in food_id:
+                                            print("the id don't present in the a Menu")
+
+                                        elif user in food_book_id:
+                                            print("\n Add more Quantity:")
+                                            quantity = int(input("\nEnter the Quantity Food Dish:-"))
+                                            for i in range(0,len(Food_veg2),1):
+                                                Food_veg2[i][3]+=quantity
+
+                                        else:
+                                            Food_veg1 = []
+                                            for i in range(0,len(Non_veg_food),1):
+                                                if user == Non_veg_food[i][0]:
+                                                    quantity = int(input("\nEnter the Quantity:--"))
+                                                    Food_veg1.append(Non_veg_food[i][0])
+                                                    Food_veg1.append(Non_veg_food[i][1])
+                                                    Food_veg1.append(Non_veg_food[i][2])
+                                                    Food_veg1.append(quantity)
+
+
+                                            Food_veg2.append(Food_veg1)
+                                            print("\n Order Book Succefully")
+                                    case 3:
+                                        print("Thank For Order Non Veg Food")
+                                        break
+                    except Exception as e:
+                        print("Order Error",e)
+              
+                case 3:
+                    for i in Food_veg2:
+                        print(i)
+
+
+                case 4:
+                    Sum1 = 0
+                    for i in range(0,len(Food_veg2),1):
+                        Sum1+=(Food_veg2[i][2]*Food_veg2[i][3])
+
+                    print("Your Total bil of Food:--",Sum1)
+
+                case 5:
+                    print("Thank you For Order......!!")
+                    break
+                
+        except Exception as e:
+            print("Order Error",e)
 
 def Sign_Out():
     sum1 = 0
@@ -112,8 +262,6 @@ def Booked_Room():
     for i in Book_Room:
         print(f"\n Name :--{i[0]} Address:-{i[1]} Room_Id:--{i[2]} Room_Type:--{i[3]} Room_Price:--{i[4]} Sign In/Sign Out:-{i[6]}")
 
-
-
 while True:
 
     print("""\n    1. Check which type of you Find
@@ -121,41 +269,51 @@ while True:
              \n    3. Book your Room
              \n    4. Sign Out
              \n    5. View your Booked room
-             \n    6. Exit 
+             \n    6. Order Food
+             \n    7. Exit 
 
              """)
 
-    Choice = int(input("\nEnter your Choice:--"))
+    try:
+        Choice = int(input("\nEnter your Choice:--"))
 
-    match(Choice):
+        match(Choice):
 
-        case 1:
-            Check_Room_Available_in_Hotel()
+            case 1:
+                Check_Room_Available_in_Hotel()
+                
+            case 2:
+                View_Rooms_Details()
+                
+            case 3:
+                Booking_Room()
+
+            case 4:
+                Sign_Out()
+                
+            case 5:
+                Booked_Room()
+
+            case 6:
+                Food_order()
+
+            case 7:
+                print("\nThank For you over website...!")
+                break
+
+                
+            case _:
+                print("Invalid Choice")
+                
+    except Exception as e:
+        print("Plz Enter the currect choice",e)
             
-        case 2:
-            View_Rooms_Details()
-            
-        case 3:
-            Booking_Room()
 
-        case 4:
-            Sign_Out()
-            
-        case 5:
-            Booked_Room()
-
-        case 6:
-            print("\nThank For you over website...!")
-        case _:
-            print("Invalid Choice")
 
 
     
 
 ##https://chocolate-candy-c79.notion.site/Youtube-Internship-roadmap-3dfd8c33330f806ca8f9df8090d3686a
-
-
-
 
 
 

@@ -765,30 +765,110 @@
 
 
 
+##for i in range(1,6,1):
+##    for j in range(1,11,1):
+##        print("multiplication",i*j)
+        
+
+##
+##for i in range(0,3,1):
+##    for j in range(0,5,1):
+##        print("*",end="")
+##    print()
+
+
+##
+##for i in range(1,3,1):
+##    for j in range(1,6,1):
+##        print(j,end="")
+##    print()
+
+
+##
+##for i in range(0,3,1):
+##    for j in range(5,0,-1):
+##        print(j,end="")
+####    print()
+##
+
+##for i in range(1,4,1):
+##    for i in range(0,6,1):
+##        print("*"*i)
+##    print()
+##  
+
+##for i in range(1,7,1):
+##    for j in range(1,i):
+##        print(j,end="")
+##    print()
+        
+##for i in range(65,71,1):
+##    for j in range(65,i,1):
+##        print(chr(j),end="")
+##    print()
+
+##
+##for i in range(0,4,1):
+##    for j in range(0,5,1):
+##        if i==0 or i==3 or j==0 or j==4:
+##            print("*",end="")
+##
+##        elif i==2 and j==2:
+##            print("*",end="")
+##        else:
+##            print(" ",end="")
+##
+##    print()
+
+
+
+
+
+##
+##for i in range(1,7,1):
+##    print(" "*i,"*"*5)
+##    
+##
+##for i in range(7,1,-1):
+##    print(" "*i,"*"*5)
+
+##
+##for i in range(0,4,1):
+##    print("*"*i)
+##
+##
+##for j in range(4,0,-1):
+##    print("*"*j)
+
+
+
+##for i in range(0,5,1):
+##    print(" "*(5-i),"*"*((2*i)-1))
+##    
+##
+##
+##for i in range(4,0,-1):
+##    print(" "*(6-i),"*"*((2*i)-3))
+##
+
+
+##for i in range(4,1,-2):
+##    print(" "*(6-i),"*"*((2*i)-3))
+##
+##for j in range(1,4,1):
+##    print(" "*(5-j),"*"*((2*j)-1))
+
+##
+##
+##
+
 
 for i in range(0,5,1):
-    print("*"*i)
+    print(" "*(4-i),"*"*((2*i)-3))
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for i in range(3,0,-1):
+    print(" "*(4-i),"*"*((2*i)-3))
 
 
 
