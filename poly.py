@@ -884,31 +884,41 @@
 
 
 
-class emp:
+# class emp:
 
-    company = "abc"
+#     company = "abc"
 
-    def __init(self,name):
-        self.name = name
+#     def __init(self,name):
+#         self.name = name
 
-    def change_company(self):
-        self.company = "XYZ"
-
-
-e1 = emp("roshan")
-
-e2 = emp("amit")
-
-e1.change_company()
-
-print(e1.company)
-print(e2.company)
-
-print(emp.company)
+#     def change_company(self):
+#         self.company = "XYZ"
 
 
+# e1 = emp("roshan")
+
+# e2 = emp("amit")
+
+# e1.change_company()
+
+# print(e1.company)
+# print(e2.company)
+
+# print(emp.company)
 
 
+
+import mysql.connector
+
+def conn():
+    return mysql.connector.connect(host="localhost",database="rrr",user="root",password="mysql@123")
+   
+
+def insert_quary():
+
+    cursor = conn()
+
+    cursor.
 
 
 

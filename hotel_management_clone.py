@@ -1,16 +1,4 @@
 import mysql.connector
-
-mydb = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="mysql@123",   # change this
-        database="rooms"           # change this
-        )
-
-mycursor = mydb.cursor()
-
-
-
 rooms = [
     [101, "Single", 1000, "Available"],
     [102, "Single", 1000, "Booked"],
@@ -102,7 +90,7 @@ def Booking_Room():
                 file = open("python.txt","w")
                 file.writelines(str(Book_Room))
                 
-                sql_database()
+##                sql_database()
                 
                 
             except ValueError:
@@ -112,42 +100,8 @@ def Booking_Room():
         print("\nPlz enter chareter value")
 
 
-def sql_database():
-    
-    insert_room = "INSERT INTO room_details(name,address,room_number,room_type,price_of_room) VALUES (%s,%s,%s,%s,%s)"
-    values=[]
-    for i in Book_Room:
-        values.append(i[0])
-        values.append(i[1])
-        values.append(i[2])
-        values.append(i[3])
-        values.append(i[4])
-
-    values = [
-                (values[0],values[1],values[2],values[3],values[4])
-             ]
-    
-    mycursor.executemany(insert_room, values)
-    mydb.commit()
-    print("\n ✅ Data inserted")
 
 
-
-def delete():
-    sql_delete = "DELETE FROM room_details WHERE  room_number = %s"
-    values1=[]
-    for i in Book_Room:
-        values1.append(i[1])
-        values1.append(i[2])
-
-##
-    values1 = (values1[1],)
-
-##        
-    
-    mycursor.execute(sql_delete, values1)
-    mydb.commit()
-    print("✅ Data deleted")
 
 
 Food_veg2=[]
@@ -307,13 +261,9 @@ def Sign_Out():
     else:
         print("\nThank You Sir Have a nice day...!")
 
-##        for i in rooms:
-##            if book_id in i[0]:
-##                i[3]="Available"
-
-    delete()
-
-    
+        for i in rooms:
+            if book_id in i[0]:
+                i[3]="Available"
             
     
 def Booked_Room():
