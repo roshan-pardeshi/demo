@@ -245,11 +245,11 @@
 
 
 
-d1 = {"roshan":99,
-      "tushar":89,
-      "manish":97,
-      "krishna":100
-      }
+##d1 = {"roshan":99,
+##      "tushar":89,
+##      "manish":97,
+##      "krishna":100
+##      }
 
 ##d = d1.values()
 ##
@@ -523,25 +523,81 @@ d1 = {"roshan":99,
 
 
 
-
-words = ["eat", "tea", "tan",'tae', "ate", "nat", "bat"]
-
-li = []
-li1 = {}
-
-##[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
-
-for i in range(0,len(words),1):
-    for j in range(0,len(words[i]),1):
-        if words[i][j] not in li or words[i][j].startswith(words[j]):
-            li[i]=words[j]
-
-
-print(li)
+##
+##words = ["eat", "tea", "tan",'tae', "ate", "nat", "bat"]
+##
+##li = []
+##li1 = {}
+##
+####[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+##
+##for i in range(0,len(words),1):
+##    for j in range(0,len(words[i]),1):
+##        if words[i][j] not in li or words[i][j].startswith(words[j]):
+##            li[i]=words[j]
 
 
+##print(li)
 
 
+hotel_data = {
+    "what is the hotel name": "Welcome to Royal Palace Hotel.",
+    
+    "where is the hotel located": "Royal Palace Hotel is located in Pune, Maharashtra.",
+    
+    "what rooms are available": "We have Single, Double, Deluxe and Suite rooms.",
+    
+    "what is the single room price": "The Single Room costs Rs. 1500 per night.",
+    
+    "what is the double room price": "The Double Room costs Rs. 2500 per night.",
+    
+    "what is the deluxe room price": "The Deluxe Room costs Rs. 3500 per night.",
+    
+    "what is the suite room price": "The Suite Room costs Rs. 5000 per night.",
+    
+    "what food do you serve": "We serve Veg and Non-Veg food.",
+    
+    "what veg food do you have": "We have Paneer Tikka, Veg Biryani, Masala Dosa and Veg Thali.",
+    
+    "what non veg food do you have": "We have Chicken Biryani, Chicken Tikka, Butter Chicken and Mutton Biryani.",
+    
+    "what are the hotel facilities": "We provide Wi-Fi, parking, room service, restaurant and laundry service.",
+    
+    "is wifi available": "Yes, free Wi-Fi is available for hotel guests.",
+    
+    "is parking available": "Yes, free parking is available for hotel guests.",
+    
+    "what are the check in timings": "Check-in time is 12:00 PM.",
+    
+    "what are the check out timings": "Check-out time is 11:00 AM.",
+    
+    "do you provide room service": "Yes, we provide 24-hour room service.",
+    
+    "how can i book a room": "You can book a room through the hotel reception or booking system.",
+    
+    "how can i cancel my booking": "You can cancel your booking by contacting the hotel reception.",
+    
+    "do you accept online payment": "Yes, we accept online payment, UPI, debit cards and credit cards.",
+    
+    "is breakfast included": "Breakfast is included with Deluxe and Suite room bookings.",
+    
+    "thank you": "You're welcome! Have a pleasant stay.",
+    
+    "hello": "Hello! Welcome to Royal Palace Hotel. How can I help you?"
+}
+
+
+
+
+while True:
+    question =input("Ask Question:-").lower()
+
+    if question in hotel_data.keys():
+        print(hotel_data[question])
+    else:
+        print("sorry sir i don't uderstand what you say")
+        
+    
 
 
 

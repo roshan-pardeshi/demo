@@ -29,7 +29,70 @@ rooms = [
     [205, "Suite", 3500, "Booked"]
 ]
 
+def AI_agent():
+    hotel_data = {
+    "what is the hotel name": "Welcome to Royal Palace Hotel.",
+    
+    "where is the hotel located": "Royal Palace Hotel is located in Pune, Maharashtra.",
+    
+    "what rooms are available": "We have Single, Double, Deluxe and Suite rooms.",
+    
+    "what is the single room price": "The Single Room costs Rs. 1500 per night.",
+    
+    "what is the double room price": "The Double Room costs Rs. 2500 per night.",
+    
+    "what is the deluxe room price": "The Deluxe Room costs Rs. 3500 per night.",
+    
+    "what is the suite room price": "The Suite Room costs Rs. 5000 per night.",
+    
+    "what food do you serve": "We serve Veg and Non-Veg food.",
+    
+    "what veg food do you have": "We have Paneer Tikka, Veg Biryani, Masala Dosa and Veg Thali.",
+    
+    "what non veg food do you have": "We have Chicken Biryani, Chicken Tikka, Butter Chicken and Mutton Biryani.",
+    
+    "what are the hotel facilities": "We provide Wi-Fi, parking, room service, restaurant and laundry service.",
+    
+    "is wifi available": "Yes, free Wi-Fi is available for hotel guests.",
+    
+    "is parking available": "Yes, free parking is available for hotel guests.",
+    
+    "what are the check in timings": "Check-in time is 12:00 PM.",
+    
+    "what are the check out timings": "Check-out time is 11:00 AM.",
+    
+    "do you provide room service": "Yes, we provide 24-hour room service.",
+    
+    "how can i book a room": "You can book a room through the hotel reception or booking system.",
+    
+    "how can i cancel my booking": "You can cancel your booking by contacting the hotel reception.",
+    
+    "do you accept online payment": "Yes, we accept online payment, UPI, debit cards and credit cards.",
+    
+    "is breakfast included": "Breakfast is included with Deluxe and Suite room bookings.",
+    
+    "thank you": "You're welcome! Have a pleasant stay.",
+    
+    "hello": "Hello! Welcome to Royal Palace Hotel. How can I help you?"
+    }
 
+    
+    while True:
+        print("\n1. Ask to Ai Agent\n2 .exit")
+        choice = int(input("Enter your choice:--"))
+        match(choice):
+            case 1:
+                question =input("Ask Question:-").lower()
+
+                if question in hotel_data.keys():
+                    print(hotel_data[question])
+                else:
+                    print("sorry sir i don't uderstand what you say")
+            case 2:
+                print("Thank You Have a nice day..!")
+                break
+                
+##                        -------------------------------------------------------- Check_Room_Available_in_Hotel----------------------------------------------##                               
 def Check_Room_Available_in_Hotel():
     try:
         user2 = int(input("\n Over Rooms Starting from 1000 to 3500 \nEnter Your Buget:=="))
@@ -55,6 +118,7 @@ Book_Room = []
 Rooms_id = list(map(lambda x:x[0],rooms))
 
 
+##                  --------------------------------------------------------View_Rooms_Details-----------------------------------------------
 
 def View_Rooms_Details():
 
@@ -62,7 +126,7 @@ def View_Rooms_Details():
         print("\n      ",i)
 
 
-
+####--------------------------------------------------------------------------Booking_Room----------------------------------------------------
 
 def Booking_Room():
 
@@ -112,6 +176,8 @@ def Booking_Room():
         print("\nPlz enter chareter value")
 
 
+####          ----------------------------------------------------------------------------Sql_database----------------------------------------------------------
+
 def sql_database():
     
     insert_room = "INSERT INTO room_details(name,address,room_number,room_type,price_of_room) VALUES (%s,%s,%s,%s,%s)"
@@ -129,9 +195,9 @@ def sql_database():
     
     mycursor.executemany(insert_room, values)
     mydb.commit()
-    print("\n ✅ Data inserted")
+    print("\n Data inserted")
 
-
+##✅ 
 
 def delete():
     sql_delete = "DELETE FROM room_details WHERE  room_number = %s"
@@ -143,12 +209,13 @@ def delete():
 ##
     values1 = (values1[1],)
 
-##        
-    
     mycursor.execute(sql_delete, values1)
     mydb.commit()
-    print("✅ Data deleted")
+    print(" Data deleted")
 
+##✅
+
+## -----------------------------------------------------------------------------------Food_order---------------------------------------------------------
 
 Food_veg2=[]
 def Food_order():
@@ -314,22 +381,30 @@ def Sign_Out():
     delete()
 
     
-            
+####    -----------------------------------------------------------------------Booked_Room-------------------------------------------------------------       
     
 def Booked_Room():
 
     for i in Book_Room:
         print(f"\n Name :--{i[0]} Address:-{i[1]} Room_Id:--{i[2]} Room_Type:--{i[3]} Room_Price:--{i[4]} Sign In/Sign Out:-{i[6]}")
 
+
+
+
+
+####      ------------------------------------------------------------ Run all over program -----------------------------------------------------------------
+
+
 while True:
 
-    print("""\n    1. Check which type of you Find
-             \n    2. View Room Series
-             \n    3. Book your Room
-             \n    4. Sign Out
-             \n    5. View your Booked room
-             \n    6. Order Food
-             \n    7. Exit 
+    print("""\n    1. ASK to AI Agent
+             \n    2. Check which type of you Find
+             \n    3. View Room Series
+             \n    4. Book your Room
+             \n    5. Sign Out
+             \n    6. View your Booked room
+             \n    7. Order Food
+             \n    8. Exit 
 
              """)
 
@@ -339,24 +414,27 @@ while True:
         match(Choice):
 
             case 1:
+                AI_agent()
+
+            case 2:
                 Check_Room_Available_in_Hotel()
                 
-            case 2:
+            case 3:
                 View_Rooms_Details()
                 
-            case 3:
+            case 4:
                 Booking_Room()
 
-            case 4:
+            case 5:
                 Sign_Out()
                 
-            case 5:
+            case 6:
                 Booked_Room()
 
-            case 6:
+            case 7:
                 Food_order()
 
-            case 7:
+            case 8:
                 print("\nThank For you over website...!")
                 break
 
