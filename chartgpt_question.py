@@ -776,76 +776,285 @@
 
 
 
-
-li = [1, 2, 3, 4]
-
-for i in range(0,len(li),1):
-    if li[i]:
-        print(li[i])
-
-    else:
-        print(li[i]*4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##
+##li = [1, 2, 3, 4]
+##
+##for i in range(0,len(li),1):
+##    if li[i]:
+##        print(li[i])
+##
+##    else:
+##        print(li[i]*4)
+
+
+
+##
+##class A:
+##
+##    def no_st(self):
+##        print("roshan pardeshi")
+##
+##a = A()
+##a.no_st()
+
+
+##
+##class A:
+##
+##    def st():
+##        print("static method are exicuted")
+##
+##A.st()
+
+
+##class A:
+##
+##    a = 10
+##
+##class B(A):
+##
+##    def inherit(self):
+##        print(self.a)
+##
+##b=B()
+##
+##b.inherit()
+
+
+
+##class A:
+##
+##    def show(self):
+##        print("class A")
+##
+##class B(A):
+##
+##    def show1(self):
+##        print("hi class b class")
+##
+##
+##class C(B):
+##
+##    def show2(self):
+##        print("class c class")
+##
+##
+##c = C()
+##
+##c.show()
+##c.show1()
+##c.show2()
+
+
+
+
+##class A:
+##
+##    def show(self):
+##        print("class A method")
+##
+##class B(A):
+##
+##    pass
+##
+##class C(A):
+##    pass
+##
+##c = C()
+##c.show()
+##
+##b = B()
+##b.show()
+
+
+
+##class A:
+##
+##    def show(self):
+##        print("class A method")
+##
+##class B:
+##
+##    def show2(self):
+##        print("class B method")
+##
+##class C(A,B):
+##    pass
+##
+##c = C()
+##c.show()
+##c.show2()
+
+
+
+##class A:
+##
+##    def show(self):
+##        print("class A method")
+##
+##class B(A):
+##
+##    def show1(self):
+##        print("class B method")
+##
+##class C(A):
+##
+##    def show2(self):
+##        print("class C method")
+##
+##
+##class D(C,B):
+##
+##    pass
+##
+##d = D()
+##d.show()
+##d.show1()
+##d.show2()
+
+
+
+
+##class A:
+##
+##    def __init__(self,name,age,address):
+##        self.name = name
+##        self.age = age
+##        self.address = address
+##
+##
+##    def __str__(self):
+##        return f" Name :- {self.name}  Age :- {self.age} Address :- {self.address}"
+##
+##n = int(input("enter how many student you try to add"))
+##li = []
+##
+##for i in range(n):
+##    a = A(input("enter the name"),int(input("enter the age")),input("enter the a address"))
+##    li.append(a)
+##
+##
+##for i in li:
+##    print(i)
+
+
+
+##class A:
+##
+##    a = 10
+##    _b = 20
+##    __c = 30
+##
+##
+##    def show(self):
+##        print("Local variable:-",self.a,"protected variable:-",self._b,"private variable:-",self.__c)
+##
+##
+##    def _show1(self):
+##        print("private variable:-",self.__c)
+##
+##
+##    def __show3(self):
+##        print("use the a protected variable:--",self._b)
+##
+##
+##    def getter(self):
+##        self.__show3()
+##
+##a = A()
+##a.show()
+##a.getter()
+##a._show1()
+
+        
+
+##from abc import ABC,abstractmethod
+##
+##class A(ABC):
+##
+##    @abstractmethod
+##    def show(self):
+##        pass
+##
+##    @abstractmethod
+##    def show1(self):
+##        pass
+##
+##
+##class B(A):
+##
+##    def show(self):
+##        print("first abstract method:-")
+##
+##    def show1(self):
+##        print("second abstract method:-")
+##
+##
+##b = B()
+##b.show()
+##b.show1()
+
+
+
+##from multipledispatch import dispatch
+##
+##class A:
+##
+##    @dispatch(int,int)
+##    def show(self,a,b):
+##        print("value of a:-",a,"value of B:-",b)
+##
+##        
+##    @dispatch(int,int,int)
+##    def show(self,a,b,c):
+##        print("adition is a:-",a+b+c)
+
+
+##a = A()
+##a.show(10,20)
+##a.show(10,20,30)
+
+
+##
+##from math import *
+##
+##from math import pi
+##
+##
+##import math
+##
+##from math import factorial
+
+
+
+##s1 = {1,2,3,4,5,4,5,1}
+##
+##
+##s2 = {4,5,6,7,8,9,10}
+##
+##
+##print("UNION :-",s1.union(s2))
+##
+##print("INTERSECTION :-",s1.intersection(s2))
+##
+##print("DIFFERENCE :-",s1.difference(s2))
+##
+##
+##print("SYMMETRIC DIFFERENCE :-",s1.symmetric_difference(s2)) 
+##
+##print("COMPLETE SET FISRT:-",s1,s2)
+
+
+
+d1 = {
+    "name":"roshan",
+    "age":21,
+    "address":"kasba",
+    "roll_no" :27
+    }
+
+
+print(d1.values())
 
 
 
