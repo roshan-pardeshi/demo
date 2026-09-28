@@ -1044,41 +1044,520 @@
 ##
 ##print("COMPLETE SET FISRT:-",s1,s2)
 
+##
+##
+##d1 = {
+##    "name":"roshan",
+##    "age":21,
+##    "address":"kasba",
+##    "roll_no" :27
+##    }
+##
+##
+##print(d1.values())
 
 
-d1 = {
-    "name":"roshan",
-    "age":21,
-    "address":"kasba",
-    "roll_no" :27
-    }
-
-
-print(d1.values())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##li = [10, 25, 30, 45, 50, 65, 70, 85]
+##
+##b = len(li)
+##
+##a = 0
+##
+##for i in li:
+##    a+=i
+##    c = a / b
+##
+##
+##
+##for i in li:
+##    if i>c:
+##        print(i)
+##    
 
 
 
+##li = [10, 20, 10, 30, 20, 40, 10, 50]
+##
+##li1=[]
+##for i in li:
+##    count = li.count(i)
+##
+##    if count>1:
+##        if i not in li1:
+##            li1.append(i)
+##
+##
+##print(li1)
+
+
+##li = ["eat", "tea", "tan", "ate", "nat", "bat"]
+##
+##
+##for i in range(0,len(li),1):
+##    for j in range(i+1,len(li)):
+####        print(li[i])
+##        if j in li[i]:
+##            print(li[j])
+
+
+##li = [4, 7, 2, 8, 4, 9, 2, 1, 7, 5]
+##
+##for i in li:
+##    count = li.count(i)
+##
+##    if count==1:
+##        print(i)
+##        break
+##
+##li = [1, 2, 3, 4, 5, 6, 7, 8]
+##
+##li1 = []
+##for i in range(0,len(li),1):
+##    for j in range(i+1,len(li)):
+##        if li[i]+li[j]==9:
+##            li1.append((li[i],li[j]))
+##
+##
+##print(li1)
+        
+
+
+
+##li = [1,2,3,4,5,8,9,10]
+##
+##
+##
+##
+##for i in range(1,len(li)+2,1):
+##    if i not in li:
+##        print(i)
+              
+
+
+
+##li1 = [10, 20, 4, 45, 99, 67, 99, 45]
+##li = []
+##
+##for i in li1:
+##    if i not in li:
+##        li.append(i)
+##
+##
+##
+##
+##max1 = li[0]
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##
+##li.remove(max1)
+##max2 = li[0]
+##for i in li:
+##    if max2<i:
+##        max2=i
+##
+##
+##li.remove(max2)
+##max3 = li[0]
+##for i in li:
+##    if max3<i:
+##        max3=i
+##
+##
+##
+##print(max3)
+
+##li = [1, 2, 3, 2, 4, 5, 1, 6, 3, 7]
+##li1 = []
+##for i in li:
+##    count = li.count(i)
+##
+##    if count>1:
+##        li1.append(i)
+##
+##
+##print(li1[1])
+
+
+
+##li= [10, 20, 30, 40, 50]
+##
+####print(li[::-1])
+##
+##
+##li.sort(reverse=True))
+
+##
+##li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+##
+##li1 = []
+##li2 =[]
+##
+##for i in li:
+##
+##    if i%2==0:
+##        li1.append(i)
+##    else:
+##        li2.append(i)
+##
+##print("EVEN:-",li1)
+##
+##print("ODD",li2)
+
+
+
+
+##li = [5, 2, 8, 2, 9, 1, 5, 8, 3]
+##
+##li1 = []
+##
+##for i in li:
+##    count = li.count(i)
+##
+##    if i not in li1:
+##        print(i," : ",count)
+##        li1.append(i)
+
+
+##li = [10, 20, 30, 50, 60]
+
+##for i in range(li[0],len(li),1):
+##    print(li[i])
+##
+
+##
+##li.pop(3)
+##
+##print(li)
+
+
+##li = [45, 12, 78, 3, 25, 9]
+##
+##
+##max1 = li[0]
+##
+##for i in li:
+##    if max1>i:
+##        max1=i
+##
+##print(max1)
+
+
+
+
+
+##li = [10, 50, 20, 80, 40, 70]
+##
+##
+##max1 = li[0]
+##
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##li.remove(max1)
+##
+##max2 = li[0]
+##
+##for i in li:
+##    if max2<i:
+##        max2 = i
+##
+##print(i)
+    
+
+##st = "programming"
+##
+##li = ""
+##
+##for i in st:
+##    count = st.count(i)
+##
+##    if i not in li:
+##        print(i,":",count)
+##        li+=i
+
+    
+##text = "aabbcde"
+##
+##for i in text:
+##    count = text.count(i)
+##
+##    if count==1:
+##        print(i)
+##        break
+
+
+
+
+##text = "madam"
+##
+##
+##res = ""
+##
+##for i in range(len(text)-1,-1,-1):
+##    res+=text[i]
+##
+##if res == text:
+##    print("palindrome")
+
+
+
+##li  = [45, 12, 78, 3, 25, 9]
+##
+##
+##min1 = li[0]
+##
+##for i in li:
+##    if min1>i:
+##        min1=i
+##
+##li.remove(min1)
+##
+##min2 = li[0]
+##
+##for i in li:
+##    if min2>i:
+##        max2=i
+##
+##print(max2)
+
+
+##li = [1, 2, 2, 3, 4, 4, 5]
+##
+##li2 = []
+##
+##for i in li:
+##    if i not in li2:
+##        li2.append(i)
+##
+##print(li2)
+
+
+
+##li = [10, 20, 30, 40, 50]
+##
+##
+##sum1=0
+##
+##for i in li:
+##    sum1+=i
+##
+##print(sum1)
+
+
+
+
+##li = [10, 25, 30, 45, 50, 65]
+##
+##
+##sum1 = 0
+##
+##s = len(li)
+##
+##for i in li:
+##    sum1+=i
+##
+##print(sum1/s)
+
+
+
+##li = [10, 15, 20, 25, 30, 35]
+##
+##
+##count_even = 0
+##
+##count_odd = 0
+##
+##for i in li:
+##    if i%2==0:
+##        count_even+=1
+##
+##    else:
+##        count_odd+=1
+##
+##print(count_even)
+##
+##print(count_odd)
+
+
+        
+##
+##li = [10, 20, 10, 30, 20, 40, 50, 30]
+##
+##
+##li1 = []
+##
+##li2 = []
+##
+##for i in li:
+##    if i not in li1:
+##        li1.append(i)
+##    else:
+##        li2.append(i)
+##
+##print(li2[0])
+    
+##
+##li = [1, 2, 3, 4, 5, 6, 7]
+##li1=[]
+##target = 7
+##for i in range(0,len(li),1):
+##    for j in range(i+1,len(li)):
+##        if li[i] + li[j] == target:
+##            li1.append((li[i],li[j]))
+##
+##print(li1)
+
+
+##li = [1, 2, 3, 4, 5]
+##
+##li1 = li[-1]
+##
+##li.pop()
+##
+##li.insert(0,li1)
+##
+##print(li)
+##
+##
+##
+
+
+
+##
+##li = [0,1, 0,2, 3, 4, 5, 6]
+##
+##
+##zeros = 0
+##
+##li1 = []
+##
+##for i in li:
+##    if i==0:
+##        zeros+=1
+##
+##    else:
+##        li1.append(i)
+##
+##for i in range(zeros):
+##    li1.append(0)
+##
+##print(li1)
+
+
+##li = [1, 2, 3, 2, 4, 1, 5, 3]
+##
+##
+##for i in li:
+##    count = li.count(i)
+##
+##
+##    if count==1:
+##        print(i)
+##        break
+
+##li = [1, 2, 3, 4, 5, 6]
+##
+##
+##for i in range(1,len(li)+2,1):
+##    if i not in li:
+##        print(i)
+
+
+
+
+##li = [10, 50, 20, 80, 40, 70]
+##
+##
+##max1 = li[0]
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##
+##print("maximum number:-",max1)
+##
+##li.remove(max1)
+##
+##max2 = li[0]
+##
+##for i in li:
+##    if max2<i:
+##        max2=i
+##
+##print("second maximum:-",max2)
+
+
+
+
+
+##li = [10, 20, 30, 40, 50]
+##
+##for i in range(len(li)-1,-1,-1):
+##    print(li[i])
+
+
+
+##li=[1, 2, 3, 4, 5, 6]
+##
+##li1 = []
+##li2 = []
+##li3=[]
+##for i in li:
+##    if i%2==0:
+##        li1.append(i)
+##    else:
+##        li2.append(i)
+##
+##
+##
+##li3.append(li1)
+##
+##li3.append(li2)
+##
+##
+##print(li3)
+
+
+
+li = [1, 2, 2, 3, 4, 4, 5, 5, 5]
+
+
+##
+##li1=[]
+##
+##for i in li:
+##    count = li.count(i)
+##
+##    if count>1:
+##        if i not in li1:
+##            li1.append(i)
+##
+##print(li1)
+##    
+
+
+##
+##li = [10, 20, 30, 40, 50]
+##
+##
+##li1 = li[-1]
+##
+##li2 = li[0]
+##
+##
+##li.pop()
+##
+##li.remove(li2)
+##
+##li.insert(0,li1)
+##
+##li.extend([li2])
+##
+##
+##print(li)
 
 
 
@@ -1087,8 +1566,41 @@ print(d1.values())
 
 
 
+##
+##li = [10, 20, 30, 40, 50]
+##
+##li[0],
+##li[-1] = li[-1],
+##li[0]
+##
+##print(li)
 
 
 
+##li = [10, 20, 30, 40, 50]
+##
+##for i in range(0,len(li),1):
+##    if li[i]==30:
+##        print(i)
 
+
+
+##li = [10, 20, 30, 40, 50]
+##
+##
+##target = 30
+##
+##for i in li:
+##    if i==target:
+##        print("found")
+##        break
+
+
+
+x = 10
+y = 20
+
+res = calculate(x, y)
+
+print(res)
 
