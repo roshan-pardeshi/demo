@@ -305,14 +305,26 @@ li = [1,2,3,4,11,22,33,2,1]
 ##file.close()
 
 
+##li = [1,2,3,4,5,6,7]
+##
+##
+##res = list(map(lambda x:x ,li))
+##
+##print(res)
 
 
 
+li = [1,2,3,4,5,6,7,8]
 
 
+res = list(map(lambda x:x**2,li))
+
+print(res)
 
 
+res1 = list(filter(lambda x:x%2==0,li))
 
+print(res1)
 
 
 
