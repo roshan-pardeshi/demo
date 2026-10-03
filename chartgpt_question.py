@@ -1890,20 +1890,439 @@ arr = [1, 2, 2, 3, 4, 3, 5, 1]
 
 
 
+##
+##
+##li = [2, 2, 1, 1, 1, 2, 2]
+##
+##li1 = 0
+##for i in li:
+##    count = li.count(i)
+##
+##    if count>1:
+##        if count>li1:
+##            li1=i
+##
+##
+##print(li1)
 
 
-li = [2, 2, 1, 1, 1, 2, 2]
 
-li1 = 0
-for i in li:
-    count = li.count(i)
+##
+##class InvalidageError(Exception):
+##    pass
+##
+##
+##try:
+##    age = int(input("enter the age:--"))
+##
+##    if age<18:
+##        raise InvalidageError
+##
+##except InvalidageError:
+##    print("error")
+##
+##else:
+##    print(age)
+##    
 
-    if count>1:
-        if count>li1:
-            li1=i
+
+##class NegativeNumberError(Exception):
+##    pass
+##
+##
+##try :
+##    a = int(input("enter the number"))
+##
+##    if a<0:
+##        raise NegativeNumberError
+##
+##except NegativeNumberError:
+##    print("Negative number exception")
+##
+##else:
+##    print("the a :-",a)
 
 
-print(li1)
+##class InvalidMarksError(Exception):
+##    pass
+##
+##try:
+##
+##    marks = int(input("enter the values:--"))
+##
+##    if marks<0 or marks>100:
+##        raise InvalidMarksError
+##
+##except InvalidMarksError:
+##    print("invalid marks")
+##
+##else:
+##    print(marks)
+
+
+##
+##class insuficientBalanceError(Exception):
+##    pass
+##
+##try:
+##    balance = 10000
+##
+##    withdraw = int(input("enter the a withdraw amount"))
+##
+##    if withdraw<balance:
+##        pass
+##    else:
+##        raise insuficientBalanceError
+##
+##
+##except insuficientBalanceError:
+##    print("insuficient balance")
+##
+##
+##else:
+##    print("suficient balance",balance-withdraw)
+
+
+##class Invalidpassword(Exception):
+##    pass
+##
+##try:
+##    password = "123456789"
+##
+##    if len(password)>8:
+##        raise Invalidpassword
+##
+##    
+##
+##except Invalidpassword:
+##    print("invalid password")
+
+
+
+##
+##try:
+##
+##    a = 10
+##    b = 0
+##
+##    print(a/b)
+##
+##except ZeroDivisionError:
+##    print("the zero division error occurs")
+##
+##else:
+##    print("a : b")
+
+##
+##class NumberNotFoundError(Exception):
+##    pass
+##
+##
+##try:
+##    li = [1,2,3,4,5,6,7,8]
+##
+##    user = int(input("enter the number"))
+##
+##    if user not in li:
+##        raise NumberNotFoundError
+##
+##
+##except NumberNotFoundError:
+##    print("number not found error ouccrs")
+##
+##else:
+##    print("the number is a",user)
+##        
+
+
+##
+##
+##class DuplicateValueError(Exception):
+##    pass
+##
+##
+##try:
+##
+##    li = [1,2,3,4]
+##
+##    for i in li:
+##        count = li.count(i)
+##
+##    if count>1:
+##        raise DuplicateValueError
+##
+##except DuplicateValueError:
+##    print("duplicates are avilable")
+##
+##else:
+##    print(count)
+
+##class InvalidUsernameError(Exception):
+##    pass
+##
+##
+##
+##try:
+##
+##    username = "roshan pardeshi"
+##
+##
+##    for i in username:
+##        if i==" " or len(i)>5:
+##            raise InvalidUsernameError
+## 
+##except InvalidUsernameError:
+##    print("username error")
+##
+##else:
+##    print(username)
+##
+##class lessSalaryError(Exception):
+##    pass
+##
+##try:
+##    salary = 1500
+##
+##    if salary<15000:
+##        raise lessSalaryError
+##
+##
+##except lessSalaryError:
+##    print("less salary error occurs")
+##else:
+##    print(salary)
+
+##
+##class InsuficientMarksError(Exception):
+##    pass
+##
+##
+##try:
+##
+##    a = 40
+##    b = 31
+##    c = 45
+##    d = 50
+##    e = 51
+##
+##    if a<35 or b<35 or c<35 or d<35 or e<35:
+##        raise InsuficientMarksError
+##
+##except InsuficientMarksError:
+##    print("the error are ouccrs")
+##
+##else:
+##    print("pass")
+
+##class LoginFailedError(Exception):
+##    pass
+##
+##try:
+##
+##    username = "roshan"
+##
+##    password = 1234
+##
+##    for i in range(3):
+##        user = input("enter the username")
+##        passw = int(input("enter the password"))
+##
+##        if user==username and passw==password:
+##            pass
+##        else:
+##            raise LoginFailedError
+##
+##except LoginFailedError:
+##    print("error")
+                    
+
+                    
+##li = [1,2,3,4,5,6,7,8,9]
+##
+##res = list(map(lambda x:x**2,li))
+##
+##print(res)
+##
+##res = list(map(lambda x:x*2,li))
+##
+##print(res)
+
+##li = ["roshan","vijay","pardeshi"]
+
+##res = list(map(lambda x:str(x),li))
+##
+##print(res)
+
+##res = list(map(lambda x:x.upper(),li))
+##
+##print(res)
+
+##price = [100,200,300,400,500]
+##
+##res= list(map(lambda x:x+(x*18/100),price))
+##
+##print(res)
+
+##li = [1,2,3]
+##
+##li1 = [4,5,6]
+##
+##res = list(map(lambda x:x+li1,li))
+##
+##print(res)
+
+
+
+
+##li = [1,2,3,4,5,6,7,8,9,10]
+
+##res = list(filter(lambda x:x%2==0,li))
+##
+##print(res)
+
+##res = list(filter(lambda x:x%2!=0,li))
+##
+##print(res)
+
+##
+##li = [10,20,30,40,50,60,70,80,90,100]
+##
+##res = list(filter(lambda x:x>50,li))
+##
+##print(res)
+
+##
+##li = [1,2,-3,4,-5,6,-7]
+##
+##res = list(filter(lambda x:x>0,li))
+##
+##print(res)
+
+##li = ["roshan","nanda","vijay","pardeshi"]
+##
+##
+##res = list(filter(lambda x:len(x)>5,li))
+##
+##print(res)
+##
+##
+##li = [1,2,3,4,5,6,7,8,9,10,15]
+##
+##res = list(filter(lambda x:x%3==0 and x%5==0,li))
+##
+##print(res)
+##
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##res = list(filter(lambda x:x%2==0,li))
+##
+##res1 = list(map(lambda x:x**2,res))
+##
+##print(res1)
+##
+##li = [100,2000,40000,50000,1000000]
+##
+##res = list(filter(lambda x:x>30000,li))
+##
+##res1 = list(map(lambda x:x+(x*10/100),res))
+##
+##print(res1)
+
+
+##li = ["roshan","sonu","pardeshi","monu","nanda","dhanger"]
+##
+##
+##res = list(filter(lambda x:len(x)>4,li))
+##
+##res1 = list(map(lambda x:x.upper(),res))
+##
+##print(res1)
+
+
+##li = [1,2,-3,4,-5,6,-7,-8]
+##
+##res = list(filter(lambda x:x%2==0,li))
+##
+##res1 = list(map(lambda x:x**x,res))
+##
+##print(res1)
+
+
+##li = [10,20,40,50,60,70,100]
+##
+##res = list(filter(lambda x:x==40,li))
+##
+##res1 = list(map(lambda x:x+5,res))
+##
+##print(res1)
+
+
+##
+##li = [10, 15, 20, 25, 30, 35, 40, 45, 50]
+##
+##li1 = list(filter(lambda x:x>20 and x%2==0,li))
+##
+##res = list(map(lambda x:x**2,li1))
+##
+
+##print(res)
+
+
+import numpy as np
+
+##li = [10,20,30,40,50]
+##
+##arr = np.array(li)
+##
+##print(arr)
+
+##arr = np.arange(1,21,1)
+##
+##print(arr)
+##
+##%%timeit
+
+##arr = np.zeros(10)
+##
+##print(arr)
+
+
+##arr1 = np.ones(10)
+##
+##print(arr1)
+
+
+li = [1,2,3,4,5,6,7,8,9,10]
+
+
+
+arr = np.array(if li%2==0)
+
+print(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
