@@ -8,15 +8,15 @@ cursor = my.cursor()
 insert = "insert into Seeker(username,password) values(%s,%s)"
 
 
+
+
+Recruiter_List = [
+    [101, "TCS", "Python Developer", "Pune", 500000,"Python SQL OOP", "Fresher"],
+    [102, "Infosys", "Data Analyst", "Bangalore", 600000, "Python  SQL  Excel", "Fresher"],
+    [103, "Wipro", "Software Developer", "Mumbai", 550000, "Python  C++  DSA", "Fresher"]
+]
+
 #________________Student panel---------------------
-        
-##1. Register
-##2. Login
-##3. Search Jobs
-##4. Apply for Job
-##5. My Applications
-##6. My Profile
-##7. Logout
 
 li = []
 Student_details = []
@@ -24,8 +24,8 @@ Student_details2 = []
 def Register():
     try:
         
-        Username = input("\nEnter Your UserName:--")
-        Password = input("\nEnter your password:--")
+        Username = input("\nEnter Your UserName:-")
+        Password = input("\nEnter your password:-")
         insert = "insert into seeker(username,password) values(%s,%s)"
         values = {
             (Username,Password)
@@ -53,7 +53,14 @@ def Register():
 
     except ValueError:
         print("Please Enter Currect value")
-
+        
+## Register
+##2. Login
+##3. Search Jobs
+##4. Apply for Job
+##5. My Applications
+##6. My Profile
+##7. Logout
 def Login():
 
     try:
@@ -64,6 +71,7 @@ def Login():
             
         cursor.execute(select_Seenker,values)
         res = cursor.fetchone()
+        print(res)
         if len(Username1)==0 or len(Password1)==0:
             print("Empty Field")
 
@@ -82,8 +90,6 @@ def Login():
                     case 4:
                         print("Thank You....!!")
                         break
-                    case _:
-                        print("\nInvalid Choice")
         else:
             print("Go Register First")
 
@@ -102,11 +108,11 @@ def Login():
 list1 = []
 list2_recuriter=[]
 list3_recuriter = []
+Recuiter_Job_List = list(map(lambda x:x[2],Recruiter_List))
 
-##Recuiter_Job_List = list(map(lambda x:x[2],Recruiter_List))
 def Search_Job():
-    Recuiter_Job_List = list(map(lambda x:x[2],Recruiter_List))
     print(Recuiter_Job_List)
+
     User = input("\nEnter your Job Title:-")
 
     if User not in Recuiter_Job_List:
@@ -144,8 +150,6 @@ def Apply_For_Job():
         for i in range(0,len(Recruiter_List),1):
             if User in  Recruiter_List[i][2]:
                 print(f"\n{Recruiter_List[i]}\n")
-                Student_Name = input("\nEnter Your Name:-")
-                Student_Mobile = input("\nEnter Your Are Mobile Number:-")
                 list2_recuriter.append(Student_Name)
                 list2_recuriter.append(Student_Mobile)
                 list2_recuriter.append(Recruiter_List[i][2])
@@ -176,8 +180,8 @@ li2 = []
 def Recruiter_Register():
     try:
         
-        Username = input("\nEnter Your Name:--")
-        Password = input("\nEnter your password:--")
+        Username = input("\nEnter Your Name:-")
+        Password = input("\nEnter your password:-")
         
         if len(Username)==0 or len(Password)==0:
             print("Empty Field")
@@ -197,22 +201,23 @@ def Recruiter_Register():
     except ValueError:
         print("Please Enter Currect value")
 
-
+##3. Post Job
+##4. Manage Jobs
+##5. View Applicants
+##6. Shortlist Candidate
+##7. Logout
 def Recruiter_Login():
     try:
-        Username1 = input("\nEnter your Username :--")
-        Password1 = input("\nEnter Your Password :--")
-        select_data = "select * from recuriter where username=%s and password=%s"
-        values = (Username1,Password1)
-        cursor.execute(select_data,values)
-        res1 = cursor.fetchone()
-        
+        Username1 = input("\nEnter your Username")
+        Password1 = input("\nEnter Your Pssword")
         if len(Username1)==0 or len(Password1)==0:
             print("Empty Field")
-        elif res1!=None:
+        elif Username1 not in li2 and Password1 not in li2:
+            print("Go Register First")
+        else:
             print("\nWelcome To Job Portal")
             while True:
-                print("\n1. Post Job\n2. Manage Jobs\n3. View Applicants\n4. Shortlist Candidate\n5. View Shortlist Candidate\n6. Logout")
+                print("\n1. Post Job\n2. Manage Jobs\n3. View Applicants\n4. Shortlist Candidate\n5. Shortlist Candidate\n6. Logout")
                 choice4 = int(input("\nEnter Your Choice:--"))
                 match(choice4):
                     case 1:
@@ -227,20 +232,13 @@ def Recruiter_Login():
                         View_Shortlisted_candidate()
                     case 6:
                         print("Thank You....!!")
-                        break
-        else:
-            print("\nGo Register First")
                 
 
     except ValueError:
         print("please enter currect value")
         
     
-Recruiter_List = [
-    [101, "TCS", "Python Developer", "Pune", 500000,"Python SQL OOP", "Fresher"],
-    [102, "Infosys", "Data Analyst", "Bangalore", 600000, "Python  SQL  Excel", "Fresher"],
-    [103, "Wipro", "Software Developer", "Mumbai", 550000, "Python  C++  DSA", "Fresher"]
-]
+
 list_For_Job = []
 
 def Post_job():
@@ -261,7 +259,6 @@ def Post_job():
         list_For_Job.append(Job_Expect)
 
         Recruiter_List.append(list_For_Job)
-        print(Recruiter_List)
         print("Job Added Successfully")
 
     except Exception:
@@ -291,10 +288,12 @@ def Manage_Job():
     print("Modify Successfully")
     
 def view_Applicants():
+
+    print("\nApplied Student")
     for i in range(0,len(list3_recuriter),1):
         print("\n1. Applicants Name :-",list3_recuriter[i][0],"\n2. Applicants Contact Number :-",list3_recuriter[i][1],"\n3. Applicants applied postion :-",list3_recuriter[i][2])
         
-##view_Applicants()
+view_Applicants()
 
 list_Shortlisted_candidate=[]
 list_Shortlisted_candidate1=[]
@@ -358,99 +357,10 @@ def LogtOut():
 ##7. Logout
 
 
-
-
-##========== ADMIN PANEL ==========
-##
-##1. View All Job Seekers
-##2. View All Recruiters
-##3. View All Jobs
-
-
-def Admin_Register():
-    try:
-        Admin_Name = input("\nEnter Your Name:--")
-        Username = input("\nEnter your Username :--")
-        Password = input("\nEnter Your Password :--")
-
-        if len(Username)==0 or len(Password)==0:
-            print("Empty Field")
-        else:
-            insert_Admin = "insert into admin(username,password) values(%s,%s)"
-            values = {
-                (Username,Password)
-                }
-            cursor.executemany(insert_Admin,values)
-            my.commit()
-            print("\nRegister Successfully")
-
-    except ValueError:
-        print("\n Enter curect value")
-    
-def Admin_Login():
-    try:
-        Username = input("\nEnter Your Username :--")
-        Password = input("\nEnter Your Password :--")
-
-        select_Admin = "select * from admin where username=%s and password=%s"
-        values = (Username,Password)
-        
-        cursor.execute(select_Admin,values)
-        res = cursor.fetchone()
-
-        if res!=None:
-            while True:
-                print("\n1. View_All_Job_Seekers\n2. View_All_Recruiters\n3. View_All_Jobs\n4. Logout")
-                choice5 = int(input("Enter your choice:--"))
-                match(choice5):
-                    case 1:
-                        View_All_Job_Seekers()
-                    case 2:
-                        View_All_Recruiters()
-                    case 3:
-                        View_All_Jobs()
-                    case 4:
-                        print("\nThank for Use this portal")
-                        break
-        else:
-            print("Go Register First")
-            
-    except ValueError:
-        print("\nEnter curect value")
-    
-
-
-def View_All_Job_Seekers():
-    select_data = "select * from seeker"
-    cursor.execute(select_data)
-    res = cursor.fetchall()
-    
-    for i in res:
-        print("\n Name:--",i[1],"*------------*Seeker Login Date and Time",i[3])
-
-def View_All_Recruiters():
-    select_data_for_recuriter = "select * from recuriter"
-    cursor.execute(select_data_for_recuriter)
-    res1 = cursor.fetchall()
-    
-    for i in res1:
-        print("\n UserName:--",i[1],"*------------*Recruiters Login date and time:--",i[3])
-        
-        
-
-def View_All_Jobs():
-    print("Total available Jobs")
-    for i in Recruiter_List:
-        print("\n", i)
-
-
-
-
-
 while True:
     print("\n=================================JOB PORTAL SYSTEM=================================")
     print("\n1. Job Seeker\n2. Recruiter\n3. Admin\n4. Exit")
-    choice = int(input("\nEnter your choice :--"))
+    choice = int(input("\nEnter your choice"))
     match(choice):
         case 1:
             while True:
@@ -464,7 +374,7 @@ while True:
                     case 3:
                         Search_Job()
                     case 4:
-                        print("\nThank You....!!")
+                        print("Thank You....!!")
                         break  
         case 2:
             while True:
@@ -478,27 +388,13 @@ while True:
                         Recruiter_Login()
                         
                     case 3:
-                        print("\nThank You....!!")
+                        print("Thank you....!!")
                         break
 
         case 3:
-            while True:
-                print("\n1. Register\n2. Login\n3. Exit")
-                choice6 = int(input("Enter Your Choice"))
-                match(choice6):
-                    case 1:
-                        Admin_Register()
-                    case 2:
-                        Admin_Login()
-                    case 3:
-                        print("\n Thank You....!!")
-                        break
-
-        case 4:
-            print("\n Thank For use this Application")
+            print("Thank you....!!")
             break
-
-           
+        
 
 
 
