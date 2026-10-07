@@ -252,6 +252,13 @@ def Post_job():
         Job_Salary = input("\nEnter Job Salary :- ")
         Jod_skills = input("\nEnter Job Required Skills :- ").capitalize()
         Job_Expect = input("\nEnter Job For Fresher/Experienced").capitalize()
+
+        insert = "insert into job_post(company_id,company_name,job_position,job_location,salary) values(%s,%s,%s,%s,%s,%s)"
+
+        values = (Company_Id,Company_Name,Post_Name,Job_Location,Job_Salary)
+        cursor.execute(insert,values)
+        my.commit()
+
         list_For_Job.append(Company_Id)
         list_For_Job.append(Company_Name)
         list_For_Job.append(Post_Name)
@@ -400,7 +407,7 @@ def Admin_Login():
 
         if res!=None:
             while True:
-                print("\n1. View_All_Job_Seekers\n2. View_All_Recruiters\n3. View_All_Jobs\n4. Logout")
+                print("\n1. View All Job_Seekers\n2. View All Recruiters\n3. View All Jobs\n4. Remove Recuriter\n5. Logout")
                 choice5 = int(input("Enter your choice:--"))
                 match(choice5):
                     case 1:
@@ -410,10 +417,14 @@ def Admin_Login():
                     case 3:
                         View_All_Jobs()
                     case 4:
+                        Remove_Recuriter()
+                    case 5:
                         print("\nThank for Use this portal")
                         break
+                    case _:
+                        print("\nInvalid Choice")
         else:
-            print("Go Register First")
+            print("\nGo Register First")
             
     except ValueError:
         print("\nEnter curect value")
@@ -436,10 +447,19 @@ def View_All_Recruiters():
     for i in res1:
         print("\n UserName:--",i[1],"*------------*Recruiters Login date and time:--",i[3])
         
-        
+def Remove_Recuriter():
+    user_name = input("\nEnter Recuriter name to you remove from portal:--")
+    delete = "delete from recuriter where username = %s"
+    values = {
+        (user_name,)
+        }
+    cursor.executemany(delete,values)
+    my.commit()
+
+    print("\nRecuriter Remove Successfullu..!!")
 
 def View_All_Jobs():
-    print("Total available Jobs")
+    print("\nTotal available Jobs")
     for i in Recruiter_List:
         print("\n", i)
 
@@ -448,7 +468,9 @@ def View_All_Jobs():
 
 
 while True:
-    print("\n=================================JOB PORTAL SYSTEM=================================")
+    print("\n*======(HireX)======================================================================================*")
+    print("\n==================(HireX)================*JOB PORTAL SYSTEM*==================(HireX)================")
+    print("\n*======================================================================================(HireX)======*")
     print("\n1. Job Seeker\n2. Recruiter\n3. Admin\n4. Exit")
     choice = int(input("\nEnter your choice :--"))
     match(choice):
