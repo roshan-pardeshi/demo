@@ -2292,41 +2292,120 @@ import numpy as np
 ##print(arr1)
 
 
-li = [1,2,3,4,5,6,7,8,9,10]
+##li = [1,2,3,4,5,6,7,8,9,10]
+##
+##
+##
+##arr = np.array(if li%2==0)
+##
+##print(arr)
 
 
 
-arr = np.array(if li%2==0)
-
-print(arr)
+from multipledispatch import dispatch
 
 
+class A:
+
+    @dispatch(int,int)
+    def show(a,b):
+        print("Addition:--",a+b)
+
+    @dispatch(int,int,int)
+    def show(a,b,c):
+        print("addition of three:--",a+b+c)
+
+##a = A()
+##a.show(10,30)
+##a.show(10,20,30)
+##
+##
+##st = "roshan"
+##print(st+"shonu")
+
+
+##
+##from abc import ABC,abstractmethod
+##
+##
+##
+##class A(ABC):
+##
+##    @abstractmethod
+##    def B(self):
+##        pass
+##
+##    @abstractmethod
+##    def C(self):
+##        pass
+##
+##class E(A):
+##
+##    def B(self):
+##        print("Roshan")
+##
+##    def C(self):
+##        print("Pardeshi")
+##
+##x = E()
+##
+##x.B()
+##x.C()
 
 
 
+##class A:
+##
+##    def static():
+##        print("static class")
+##
+##    def non_static(self):
+##        print("non static method")
+##
+##a = A()
+##A.static()
+##a.non_static()
 
 
 
+##class A:
+##
+##    def show(self):
+##        print("Class A")
+##
+##class B(A):
+##
+##    def show2(self):
+##
+##        print("Class B")
+##
+##b =B()
+##b.show()
+##b.show2()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##class A:
+##
+##    a = 20
+##    _b = 30
+##    __c = 40
+##
+##    def show(self):
+##        print(self.a+self._b+self.__c)
+##
+##    def _show1(self):
+##        print("protected method")
+##        self.__show2()
+##
+##    def __show2(self):
+##        print("Private method")
+##        
+##
+##
+##c = A()
+##c.show()
+##c._show1()
 
 
 

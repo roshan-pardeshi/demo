@@ -228,13 +228,19 @@ def Recruiter_Login():
                     case 6:
                         print("Thank You....!!")
                         break
+                    case _:
+                        print("\n Invalid Choice")
         else:
             print("\nGo Register First")
                 
 
     except ValueError:
-        print("please enter currect value")
-        
+        print("\nPlease enter curect value")
+
+def Recuriter_Profile():
+    pass
+    
+    
     
 Recruiter_List = [
     [101, "TCS", "Python Developer", "Pune", 500000,"Python SQL OOP", "Fresher"],
@@ -279,23 +285,27 @@ def Post_job():
         
 
 def Manage_Job():
-    print("\nWhich Section You Modify:- 1.Company Name 2.Post Name 3.Job Location 4.Job Salary 5.Job Skills 6.jOB Exprience")
-    check_it = list(map(lambda x:x[0],Recruiter_List))
-    user = int(input("Enter Your Company Id :-"))
+    try:
+        
+        print("\nWhich Section You Modify:- 1.Company Name 2.Post Name 3.Job Location 4.Job Salary 5.Job Skills 6.jOB Exprience")
+        check_it = list(map(lambda x:x[0],Recruiter_List))
+        user = int(input("Enter Your Company Id :-"))
 
 
-    if user not in check_it:
-        print("Invalid Company Id")
-    else:
-        for i in range(0,len(Recruiter_List),1):
-            if user == Recruiter_List[i][0]:
-                user_index = int(input("\nEnter Which section You Modify :- "))
-                user_change = input("\n Enter the Change :- ").capitalize()
-                Recruiter_List[i][user_index]=user_change
+        if user not in check_it:
+            print("Invalid Company Id")
+        else:
+            for i in range(0,len(Recruiter_List),1):
+                if user == Recruiter_List[i][0]:
+                    user_index = int(input("\nEnter Which section You Modify :- "))
+                    user_change = input("\n Enter the Change :- ").capitalize()
+                    Recruiter_List[i][user_index]=user_change
 
-                print(Recruiter_List)
+                    print(Recruiter_List)
 
-    print("Modify Successfully")
+        print("Modify Successfully")
+    except Exception:
+        print("\nValue Error")
     
 def view_Applicants():
     for i in range(0,len(list3_recuriter),1):
@@ -310,7 +320,7 @@ def Shortlisted_candidate():
     Candidate_Name = input("\nEnter Shortlisted candidate Name:-- ")
 
     if Candidate_Name not in list3_recuriter1:
-        print("Sorry this Name candidate not present")
+        print("\nSorry this Name candidate not present")
     else:
         for i in range(0,len(list3_recuriter),1):
             list_Shortlisted_candidate.append("Shortlisted")
@@ -354,16 +364,6 @@ def LogtOut():
 ##3. Admin
 ##4. Exit
 ##
-##Enter choice:
-
-##1. Register
-##2. Login
-##3. Search Jobs
-##4. Apply for Job
-##5. My Applications
-##6. My Profile
-##7. Logout
-
 
 
 
@@ -372,7 +372,7 @@ def LogtOut():
 ##1. View All Job Seekers
 ##2. View All Recruiters
 ##3. View All Jobs
-
+##4. Remove Recuriter
 
 def Admin_Register():
     try:
@@ -456,7 +456,7 @@ def Remove_Recuriter():
     cursor.executemany(delete,values)
     my.commit()
 
-    print("\nRecuriter Remove Successfullu..!!")
+    print("\nRecuriter Remove Successfully..!!")
 
 def View_All_Jobs():
     print("\nTotal available Jobs")
@@ -487,7 +487,9 @@ while True:
                         Search_Job()
                     case 4:
                         print("\nThank You....!!")
-                        break  
+                        break
+                    case _:
+                        print("\n Invalid Choice")
         case 2:
             while True:
                 print("\n1. Register\n2. Login\n3. Exit")
@@ -502,6 +504,8 @@ while True:
                     case 3:
                         print("\nThank You....!!")
                         break
+                    case _:
+                        print("Invalid Choice")
 
         case 3:
             while True:
@@ -515,6 +519,8 @@ while True:
                     case 3:
                         print("\n Thank You....!!")
                         break
+                    case _:
+                        print("\n Invalid Choice")
 
         case 4:
             print("\n Thank For use this Application")
