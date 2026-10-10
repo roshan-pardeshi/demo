@@ -2411,6 +2411,148 @@ class A:
 
 
 
+##
+##li = [10,20,30,40,50,60,70]
+##
+##
+##max1 = li[0]
+##
+##for i in li:
+##    if max1<i:
+##        max1=i
+##
+##li.remove(max1)
+##
+##max2 = li[0]
+##
+##for i in li:
+##    if max2<i:
+##        max2=i
+##
+##        
+##print(max2)
+
+##st = "datascience"
+##st1 = ""
+##for i in st:
+##    count = st.count(i)
+##
+##    if i not in st1:
+##        print(i,":",count)
+##        st1+=i
+
+
+##
+##li = [1,2,3,4,5,6,7,3,1,2,3]
+##
+##li1 = []
+##
+##for i in li:
+##    if i not in li1:
+##        li1.append(i)
+##
+##
+##print(li1)
+
+
+
+##li = [1,2,3,4,5]
+##li2 = [4,5,6,7,8]
+##
+##
+##
+##for i in li:
+##    if i in li2:
+##        print(i)
+
+
+##
+##st = "madam"
+##
+##
+##if st==st[::-1]:
+##    print("palindrome")
+##
+##num = 112
+##
+##num = str(num)
+##
+##if num==num[::-1]:
+##    print("palinfrome")
+##    
+
+
+##
+##st = "python use for datascience python"
+##st = st.split()
+##d1 = {}
+##
+##for i in st:
+##    count = st.count(i)
+##    d1[i]=count
+##
+##print(d1)
+
+
+
+
+
+li = [1,2,3,5,6,7,8,9,10]
+
+
+even = []
+odd = []
+
+
+for i in li:
+    if i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+
+
+print("even:--",even)
+print("odd:---",odd)
+
+
+
+
+
+
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60, 70, 80])
+
+
+
+
+print(arr.mean())
+
+print(np.median(arr))
+
+
+print(max(arr))
+
+print(min(arr))
+
+print(np.var(arr))
+print(np.std(arr))
+
+print(arr>40)
+
+##
+##for i in arr:
+##    if i>50:
+##        i=100
+
+arr = np.random.randint(1,9,(3,3))
+
+print(arr)
+
+
+
+
+
 
 
 
